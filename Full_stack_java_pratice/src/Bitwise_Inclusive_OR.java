@@ -1,4 +1,4 @@
-public class Logical_OR {
+public class Bitwise_Inclusive_OR {
     final strictfp public static void main(String[] args) {
         int x =10,y=15;
         if(++x<10 | ++y>15){

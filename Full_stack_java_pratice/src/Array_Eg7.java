@@ -6,9 +6,9 @@ public class Array_Eg7 {
         for (int e : data){
             if (e!=key){
                 continue;
-           //      count++;   unreachable  statement
+              //   count++;   unreachable  statement C.E
             }
         }
-        System.out.println(count + "found ");
+        System.out.println(count + " found ");
     }
 }

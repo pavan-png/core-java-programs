@@ -163,3 +163,11 @@ $ git remote set-url origin https://github.com/pavan-png/Java_Full_Stack_Pratice
 // the set url is used to set the new path 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// updates were rejected because the remote contains work that you do not have locally
+solution
+git fetch origin main
+
+git merge origin/main
+// after that use you can push to repository 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------

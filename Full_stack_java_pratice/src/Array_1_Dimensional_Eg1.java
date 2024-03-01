@@ -18,5 +18,6 @@ public class Array_1_Dimensional_Eg1 {
               System.out.println(ar[i]);
           }
 
+
     }
 }

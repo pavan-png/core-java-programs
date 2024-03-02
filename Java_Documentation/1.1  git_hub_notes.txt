@@ -170,4 +170,6 @@ git fetch origin main
 
 git merge origin/main
 // after that use you can push to repository 
+
+now repeat commands from git add to push every thing will be alright. 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------

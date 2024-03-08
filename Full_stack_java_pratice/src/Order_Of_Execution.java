@@ -4,7 +4,7 @@ class Order{
     static int b ;
 
     // static block
-    static {
+     static {
     a = 10;
     b = 20;
         System.out.println("static block");

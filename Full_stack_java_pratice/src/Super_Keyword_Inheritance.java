@@ -23,5 +23,6 @@ public class Super_Keyword_Inheritance {
         obj.disp();
         obj.display();
 
+
     }
 }

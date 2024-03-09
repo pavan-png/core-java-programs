@@ -1,9 +1,9 @@
-.docx files cannot be opened on github , download then an then open . 
+.docx files cannot be opened on github , download them  and then open . 
 
 learning path :
 Download java-full-stack-pratice-programs repository
 Once downloaded open the "Full_stack_java_pratice" folder with any IDE
- ( intellij idea recomended    https://www.jetbrains.com/idea/download/?section=windows  install community edition) 
+ ( intellij idea recommended    https://www.jetbrains.com/idea/download/?section=windows  install community edition) 
  
  "Java_Documentation"  folder consists of word files open it with any doc reader  ( word  (or) google files ) .
  

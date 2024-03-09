@@ -7,5 +7,8 @@ public class String_Eg83 {
         System.out.println(s.substring(1,5));
         // end index is n-1 .
 
+        System.out.println(s.substring(4,1));
+        // exception because starting index  should always  be greater than end index.
+
     }
 }

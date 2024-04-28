@@ -172,4 +172,11 @@ git merge origin/main
 // after that use you can push to repository 
 
 now repeat commands from git add to push every thing will be alright. 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------tgu
+
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/pavan-png/UI-Technologies.git'
+
+if files are not added to stage area and we tried to commit then this  error arises 
+solution :  add the files to stage area  using command git add.
+

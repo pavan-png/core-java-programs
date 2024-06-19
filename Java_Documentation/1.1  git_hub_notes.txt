@@ -180,3 +180,5 @@ error: failed to push some refs to 'https://github.com/pavan-png/UI-Technologies
 if files are not added to stage area and we tried to commit then this  error arises 
 solution :  add the files to stage area  using command git add.
 
+// if files are changed and new file with same name is replaced in the main directory ( local pc) then 
+no error , if folders are changed then error arises even though replaced with same name

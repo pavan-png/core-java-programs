@@ -1,11 +1,15 @@
 class Parent1{
 int a ;
 int b;
-    Parent1(){
+   Parent1(){
         System.out.println("this is empty parent class constructor");
         a = 10;
         b = 20;
     }
+
+
+
+
     Parent1(int a , int b){
         System.out.println("this  is parameterized child class constructor");
         this.a = a;

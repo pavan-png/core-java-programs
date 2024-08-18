@@ -59,32 +59,15 @@ See 'git help git' for an overview of the system.
 git help command 
 
 -----------------------------------------------------------------------------------------------------------------------------------------
+git config 
+// it is used when the git software is used for the first time
+this  command will set the user identity like email , email , password etc.
+this configuration information is used by the git software for every  push operation encountered
 
-$ git config --global user.name "pavan-png"
-
---------------------------------------------------------------------------------------------------------------------------------------------------------
-$ git config --global user.email "mohanpavankalyan52@gmail.com"
-
-------------------------------------------------------------------------------------------------------------------------------------------
-$ git config --list
-diff.astextplain.textconv=astextplain
-filter.lfs.clean=git-lfs clean -- %f
-filter.lfs.smudge=git-lfs smudge -- %f
-filter.lfs.process=git-lfs filter-process
-filter.lfs.required=true
-http.sslbackend=openssl
-http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
-core.autocrlf=true
-core.fscache=true
-core.symlinks=false
-pull.rebase=false
-credential.helper=manager
-credential.https://dev.azure.com.usehttppath=true
-init.defaultbranch=master
-user.name=pavan-png
-user.email=mohanpavankalyan52@gmail.com
-
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------
+// this command is used to provide the list of configuration along with path of gitconfig file 
+in this case it is already configured , since name and email are visible if we want to delete , go to the gitcofig path in the user.name and remove the file 
+and type this command again and check this time username and email will not present
 
 $ git config --list --show-origin
 file:C:/Program Files/Git/etc/gitconfig diff.astextplain.textconv=astextplain
@@ -104,23 +87,74 @@ file:C:/Program Files/Git/etc/gitconfig init.defaultbranch=master
 file:C:/Users/Administrator/.gitconfig  user.name=pavan-png
 file:C:/Users/Administrator/.gitconfig  user.email=mohanpavankalyan52@gmail.com
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
+// this command is used to provide the list of configuration
+
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=pavan-png
+user.email=mohanpavankalyan52@gmail.com
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+// to set the username and email use command 
+
+$ git config --global user.name "pavan-png"
+$ git config --global user.email "mohanpavankalyan52@gmail.com"
+// global means user can work with git commands from different drives of a computer 
+
+
+// after executing this command if you want to check whether the username and email is added use command
+
+git config --list 
+     (or)
+git config --list  --show-origin
+// we should able to see the username and our email which is added
+
+------------------------------------------------------------------------------------------------------------------------------------------
 
 $ git init
 Initialized empty Git repository in C:/Users/Administrator/IdeaProjects/.git/
+
+// normally user create a folder to keep the  source code at some particular path 
+using git bash navigate to that path where the source code of the user is present and execute this command 
+this will create a .git folder at the path , which is used by the git software to identify which folder is
+participating in the pushing to local and remote repositories.
+by default .git is a hidden folder
+.git maintiains stage area and local repository
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 $ pwd
 /c/users/administrator/ideaprojects
 
+// to check which directory we are currently present in this command is used
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+git status 
+// this command is used to check the status of the current working directory
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 $git add filename   
 // to push single file to stage area 
 
 $git add .
-// to push all files at a timre
+// to push all files at a time
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

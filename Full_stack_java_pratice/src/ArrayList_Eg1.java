@@ -5,7 +5,7 @@ public class ArrayList_Eg1 {
         ArrayList al1 = new ArrayList(); // al1
         al1.add(10); // 10 is an object which is added in the collection al1
         al1.add(20); // to add objects in the ArrayList we use add() method
-        al1.add(30);
+        al1.add(30); // al.add ( new Integer (10) ) internal working
 
         // homogenous data
         System.out.println("array list1 data is : "+al1);

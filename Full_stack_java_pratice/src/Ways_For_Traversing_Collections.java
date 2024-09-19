@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.ListIterator;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Ways_For_Traversing_Collections {
     public static void main(String[] args) {
@@ -12,7 +9,7 @@ public class Ways_For_Traversing_Collections {
         al.add(87);
         al.add(50);
 
-        // using for and for each loop you can  traverse only collections which are index based.
+        // using for loop you can  traverse only collections which are index based.
         System.out.println("using for loop");
         for (int i = 0 ; i<al.size();i++){
             System.out.print(al.get(i)+ "   "); // get method is used to access the elements
@@ -31,8 +28,9 @@ public class Ways_For_Traversing_Collections {
          */
 
        Iterator ir = al.iterator();
-       /*  instance variable
-       here Iterator is a class and by using iterator object (al) we are calling iterator() method.
+       /*
+       return type of the iterator() is of Iterator type . so it is collected in the reference variable
+       ir of type Iterator.
         */
 
         while (ir.hasNext()==true){
@@ -72,7 +70,35 @@ public class Ways_For_Traversing_Collections {
         al1.addAll(ts);
         ListIterator li1 = al1.listIterator(al1.size());
         while (li1.hasPrevious()==true){
+            // Integer e = (Integer) li1.previous(); works same as below line
             System.out.print(li1.previous() + "   ");
         }
+        System.out.println();
+        System.out.println("using descending iterator");
+        /*
+        descending iterator is used only for  LinkedList , ArrayDeque , TreeSet
+         */
+
+        LinkedList t = new LinkedList();
+        t.add(234);
+        t.add(36);
+        t.add(345);
+        t.add(78);
+        t.add(98);
+        System.out.println("linked list " + t);
+        Iterator di = t.descendingIterator();
+        /*
+        it is used to iterate in reverse direction
+        it doesn't need any  size argument , by default it is placed at the end of the collection
+        and iterate from last element to first.
+        it doesn't need hasPrevious() and previous() methods to check for previous element and move backwards
+        it  works with hasNext() and next() to iterate in reverse direction
+         */
+
+        while (di.hasNext()){
+            // Integer s = (Integer) di.next();  works same as below line
+            System.out.print(di.next()+ "   ");
+        }
+
     }
 }

@@ -1,3 +1,5 @@
+import java.util.Map;
+
 public class Array_Min_Element {
     public static void main(String[] args) {
         int[] arr = {80,40,90,50,120};
@@ -10,5 +12,8 @@ public class Array_Min_Element {
 
         }
         System.out.println("the min element in the array is "+min);
+
+
+
     }
 }

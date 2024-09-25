@@ -1,13 +1,7 @@
-class Employee {
-    String a = "pavan";
-    int id = 12;
+class Program_Without_Main_Method {
+    static{
+        System.out.println("class without a main method");
 
-        }
+    }
 
-  class Main_Outside_Class4 {
-      public static void main(String[] args) {
-        Employee obj = new Employee();
-        System.out.println(obj.id);
-        System.out.println(obj.a);
-      }
-  }
+}

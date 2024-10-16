@@ -22,6 +22,8 @@ class MyComparator implements Comparator{
 public class Comparator_Eg1 {
     public static void main(String[] args) {
         TreeSet ts = new TreeSet( new MyComparator());
+        // TreeSet constructor accepts comparator type as argument , check in javap java.util.TreeSet
+
         /*
         if we create TreeSet object without passing the arguments by default it would implement Comparable interface
         but

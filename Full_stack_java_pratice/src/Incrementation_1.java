@@ -3,7 +3,7 @@ public class Incrementation_1 {
         int a = 7;
        //Rule1:  incrementation will be done whether it is post (or) pre o/p will be same . if declared as below
         a++; // (or) ++a same output  ,  ouput will be 8
-        System.out.println("post increment " + a );
+        System.out.println( a );
 
         //Rule 2:  if increment is directly written in the print statement , and if it is post increment first a is printed
         //  and then incremented , output will be  8 and a incremented to 9

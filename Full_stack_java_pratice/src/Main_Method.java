@@ -1,4 +1,4 @@
-public class Main_Method_Example {
+public class Main_Method {
     public static void main(String[] args) {
         System.out.println("One");
     }

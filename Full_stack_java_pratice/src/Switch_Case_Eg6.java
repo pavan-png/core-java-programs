@@ -1,6 +1,6 @@
 public class Switch_Case_Eg6 {
     public static void main(String[] args) {
-        byte x =20;
+        byte x = 20;
         switch(x){
             case 10:
                 System.out.println("hello");

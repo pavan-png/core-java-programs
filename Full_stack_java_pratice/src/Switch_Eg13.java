@@ -2,6 +2,7 @@ public class Switch_Eg13 {
     public static void main(String[] args) {
         boolean opt = true;
 
+
       /*
         switch (true){
             case true :

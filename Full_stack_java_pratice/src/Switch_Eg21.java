@@ -8,7 +8,7 @@ public class Switch_Eg21 extends Infinity {
         switch (sw) {
             case 0: {
                 for (int x = 10; x > 5; x++)
-                    // this  condition would result in infinite loop
+                    // this  condition would result in infinite loop7
                     if (x > 10000000)
                         x = 10; // not declaration but intialization
                 /*
@@ -27,6 +27,7 @@ public class Switch_Eg21 extends Infinity {
             }
             case 2: {
                 Infinity inf = new Switch_Eg21();
+                // to type cast there must be parent to child (or) child to parent relationship else it leads to c.e
                 Switch_Eg21 b = (Switch_Eg21) inf;
             }
 

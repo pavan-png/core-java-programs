@@ -8,10 +8,15 @@ public class Switch_Case_Eg8 {
             case 99:
                 System.out.println("99");
                 break;
-          /*   case 'a' :
+          /* case 'a' :
                 System.out.println("100");
+                break; */
+            case 'w':
+                System.out.println("w");
+            break;
 
-           */
         }
+
+
     }
 }

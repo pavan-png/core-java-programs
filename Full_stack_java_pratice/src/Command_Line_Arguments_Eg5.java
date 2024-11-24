@@ -1,6 +1,9 @@
 public class Command_Line_Arguments_Eg5 {
     public static void main(String[] args) {
-        if(args.length==1 | args[2].equals("test")){
+        //bitwise or operator will check both the conditions even though the first one evaluates to true.
+        if(args.length==1 | args[1].equals("test")){
+            // if we try to access the location that we have not provided as command line arguments,
+            // it leads to ArrayIndexOutOfBoundsException.
             System.out.println("test case");
         }
         else {

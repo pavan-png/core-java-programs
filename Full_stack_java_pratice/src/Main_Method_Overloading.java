@@ -4,16 +4,19 @@ other main methods are ignored by jvm.
 
  */
 
-public class Main_Method_Overloading_3 {
-    public static void main(byte[] args) {
+public class Main_Method_Overloading {
+    public static void main(byte[] args)
+    {
         System.out.println("this byte main method");
     }
 
     public static void main(short[] args) {
+
         System.out.println("this is short main method");
     }
 
     public static void main(int[] args) {
+
         System.out.println("this is int  main method");
     }
 
@@ -22,15 +25,18 @@ public class Main_Method_Overloading_3 {
         System.out.println("the number passed as long argument is " +args);
     }
     public static void main(float[] args) {
+
         System.out.println("this is float main method");
     }
 
     public static void main(double[] args) {
+
         System.out.println("this is double main method");
     }
 
 
     public static void main(char[] args) {
+
         System.out.println("this is char main method");
     }
 
@@ -41,7 +47,8 @@ public class Main_Method_Overloading_3 {
 
 
     public static void main(String[] args) {
-        // main method with regular signature is automatically called by the jvm. it does not need to be invoked manually.
+        // main method with regular signature is automatically called by the jvm.
+        // it does not need to be invoked manually.
         System.out.println("this is original main method");
     }
 }

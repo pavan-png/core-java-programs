@@ -1,4 +1,4 @@
-public class Bitwise_Exclusive_OR {
+public class Bitwise_Exclusive_Or_Not_Compliment {
     public static void main(String[] args) {
         boolean b1  = true;
         boolean b2  = false;

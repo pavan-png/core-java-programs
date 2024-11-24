@@ -3,7 +3,8 @@ public class Execution_Process {
         System.out.println("Static block");
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         System.out.println("main method");
     }
 

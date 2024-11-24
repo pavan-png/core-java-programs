@@ -8,6 +8,10 @@ public class Char_To_Int {
         int b = 99;
         char d = (char)b;
         System.out.println(d);
+
+
+
+
     }
 }
 

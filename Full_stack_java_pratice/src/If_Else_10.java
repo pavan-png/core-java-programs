@@ -3,7 +3,7 @@ public class If_Else_10 {
       /*  if (true)
         int x =10;
 
-    since flower brackets are omitted , as there there is only one statement , you cannot use declarative statement
+    since flower brackets are omitted, as there is only one statement, but we cannot use declarative statement
 
 
     */

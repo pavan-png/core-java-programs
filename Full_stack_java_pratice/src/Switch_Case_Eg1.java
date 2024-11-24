@@ -1,6 +1,6 @@
 public class Switch_Case_Eg1 {
     public static void main(String[] args) {
-        int day = 3;
+        int day = 6;
         String dayString;
         String dayType;
         switch (day){
@@ -14,7 +14,16 @@ public class Switch_Case_Eg1 {
                 dayString = "Wednesday";
                 break;
             case 4 :
-                dayString = "hursday";
+                dayString = "Thursday";
+                break;
+            case 5:
+                dayString = "Friday";
+                break;
+            case 6:
+                dayString = "Saturday";
+                break;
+            case 7:
+                dayString = "Sunday";
                 break;
             default:
                 dayString = "Invalid day";
@@ -30,6 +39,7 @@ public class Switch_Case_Eg1 {
             case 6:
             case 7:
                 dayType = "weekend";
+                break;
             default:
                 dayType = "invalid day type";
         }

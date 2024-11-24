@@ -1,6 +1,6 @@
 public class Typecasting_Underscore {
     public static void main(final String[] args) {
-       /* from jdk 1.7 for a literal we can give "_" laso , if we give compiler will just remove
+       /* from jdk 1.7 for a literal we can give "_" aso , if we give compiler will just remove
           in .class file */
         char c ='Z';
         long l = 100_00l;

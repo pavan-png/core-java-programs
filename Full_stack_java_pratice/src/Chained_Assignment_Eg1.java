@@ -4,7 +4,12 @@ public class Chained_Assignment_Eg1 {
         // chained assignment
         a=b=c=d=10;
 
-         /* int d = e = f = g;  here d is only declared e,f,g is not declared  */
+        int e,f,g,h,i;
+        i = 5;
+        e=f=g=h=i; //the last one to the right should be a literal (or) variable with previously assigned value.
+
+
+
 
 
     }

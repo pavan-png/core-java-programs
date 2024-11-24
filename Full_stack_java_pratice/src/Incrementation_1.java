@@ -23,14 +23,16 @@ public class Incrementation_1 {
         //Rule 4 : whenever pre increment is assigned to variable first incremented and then stored
         // in l.h.s  , output is 12
         int c = ++a;
-        System.out.println("pre increment after assigning "+c);
+        System.out.println("pre increment after assigning to c is "+c);
+        System.out.println(a);
 
         int d = a++ + a++ + ++a ;
         // prints  the incremented value of a o/p is 15
         System.out.println(a);
 
         // adds the incremented value every time and stores in d
-        System.out.println(d);
+        System.out.println("value of d is : "+d);
+
 
 
 

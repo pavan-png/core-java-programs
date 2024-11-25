@@ -3,7 +3,7 @@ public class While_Loop_Eg5 {
 
       /*
         while(false){
-        System.out.println("helo");
+        System.out.println("hello");
         }
         unreachable statement
        */

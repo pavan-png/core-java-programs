@@ -2,7 +2,7 @@ public class Operators {
     public static void main(String[] args) {
         int mask = 0;
         int count =0;
-        // here since 5<7 evaluates to true next condition (count) is not evelauted , and since | ( bitwise or operator )
+        // here since 5<7 evaluates to true next condition (count) is not evaluated , and since | ( bitwise or operator )
         // evaluates both conditions mask is also evaluated
         // here mask is first used to check condition and then incremented
         if(((5<7) || (++count>1))| mask++<10) mask = mask+1;

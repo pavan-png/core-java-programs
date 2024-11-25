@@ -1,4 +1,4 @@
-public class For_Loop_Eg21 {
+public class String_Eg145 {
     public static void main(String[] args) {
         // you can store character in String but use double quotes , if used single quotes leads to C.E
         String[] arr = {"A" , "B" ,"C", "D" };

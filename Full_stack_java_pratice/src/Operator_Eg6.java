@@ -3,8 +3,8 @@ public class Operator_Eg6 {
         int score = 95;
         char grade = 'P';
      /*
-      compile time error nesting of relational operators is not possible
-        if (50<=score<60)
+      
+        if (50<=score)<60)
             //false<60   boolean cannot be compared other types.
 
             grade= 'D';

@@ -4,7 +4,7 @@ public class For_Loop_Eg14 {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (i == j)
-                    continue ;
+                    continue ; // inner loop particular iteration is skipped
                 System.out.println("i = " + i + "  j = " + j);
             }
         }

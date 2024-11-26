@@ -1,11 +1,12 @@
 public class Local_Variable_Eg2 {
     public static void main(String[] args) {
         try {
-            int i =  Integer.parseInt("ten");
+            int i =  Integer.parseInt("10");
+            System.out.println(i);
         }
         catch (NullPointerException e){
-            // System.out.println(i); C.E
-            // since i is in try block it cannot be accessed in the catch block
+             e.printStackTrace();
+            // here i is a local variable cannot be accessed in the catch block
         }
     }
 }

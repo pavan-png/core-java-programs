@@ -13,6 +13,7 @@ public class Method_With_Return_Type_And_Parameters {
     public static void main(String[] args) {
         Method_With_Return_Type_And_Parameters obj = new Method_With_Return_Type_And_Parameters();
         int result  = obj.add(10,20); // arguments
+        //if the method returns anything it is optional whether to collect it or not
         System.out.println(result);
 
     }

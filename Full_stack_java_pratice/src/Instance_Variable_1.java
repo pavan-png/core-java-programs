@@ -8,7 +8,7 @@ public class Instance_Variable_1 {
         System.out.println(obj.c);
         System.out.println(obj.i);
     }
-    // scope of reference variable "obj" is  only until this line . once control comes to this line the referencce
+    // scope of reference variable "obj" is  only until this line . once control comes to this line the reference
     // variable obj loses its value i.e (hashcode)
 
 

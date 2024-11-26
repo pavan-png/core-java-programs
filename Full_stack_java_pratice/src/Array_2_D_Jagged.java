@@ -1,15 +1,18 @@
-import java.util.Arrays;
 import java.util.Scanner;
-import java.util.SortedMap;
-
 public class Array_2_D_Jagged {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
+        int outerArraySize;
+        int innerArraySize;
         int[][] arr  = new int[3][];
-        arr[0] = new int[3];
-        arr[1] = new int[2];
-        arr[2] = new int[1];
+        System.out.println("enter the outer array size");
+        outerArraySize = sc.nextInt();
+        for (int i = 0; i<outerArraySize;i++){
+            System.out.println("enter the size of inner array arr:[ "+i+"]");
+            innerArraySize = sc.nextInt();
+            arr[i] = new int[innerArraySize];
+        }
+        
         for (int i = 0; i <arr.length;i++){
             for (int j = 0; j<arr[i].length;j++){
                 System.out.println("enter the marks for " + i + " class and " +j+" student ");

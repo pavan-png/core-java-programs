@@ -1,4 +1,4 @@
-public class Array_Eg8 {
+public class String_Eg146 {
     public static void main(String[] args) {
         String s1 = new String("pavan");
         s1.concat("kalyan");

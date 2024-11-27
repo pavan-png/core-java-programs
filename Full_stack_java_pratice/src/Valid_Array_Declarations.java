@@ -42,7 +42,6 @@ public class Valid_Array_Declarations {
         int[]     arr12[];
   //    [][]int   arr13;       square braces in the starting of declaration is not valid
         int[][]   arr14,arr15;
-        int       arr16[],arr17[];
   //    int[]     []arr18,[]arr19;   multiple array declarations is not possible like this
         int[]     []arr20,arr21[];   // declaration like this is allowed
  //     int[]     arr22[],[]arr22    // after the declaration of the 1st array ,
@@ -54,13 +53,5 @@ public class Valid_Array_Declarations {
         int       []arr27,arr28;       // here arr27 and arr28 both are 1-dimensional arrays
         int       [][]arr29,arr30;      // here arr29 and arr30 both are 2-dimensional
         int       []arr31, arr32[][];   // here aar31 is one dimensional and arr32 is 3-dimensional
-
-
-
-
-
-
-
-
     }
 }

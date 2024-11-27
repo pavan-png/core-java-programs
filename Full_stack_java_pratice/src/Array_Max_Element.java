@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Array_Max_Element {
     public static void main(String[] args) {
         int[] arr = {80,40,90,50,120};
@@ -9,5 +11,6 @@ public class Array_Max_Element {
             }
         }
         System.out.println("the max element in the array is : "+max);
+
     }
 }

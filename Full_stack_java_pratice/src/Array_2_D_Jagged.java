@@ -4,9 +4,10 @@ public class Array_2_D_Jagged {
         Scanner sc = new Scanner(System.in);
         int outerArraySize;
         int innerArraySize;
-        int[][] arr  = new int[3][];
+
         System.out.println("enter the outer array size");
         outerArraySize = sc.nextInt();
+        int[][] arr  = new int[outerArraySize][];
         for (int i = 0; i<outerArraySize;i++){
             System.out.println("enter the size of inner array arr:[ "+i+"]");
             innerArraySize = sc.nextInt();

@@ -7,7 +7,7 @@ public class Array_Eg23 {
                 if (s.length()==4)
                     break;
             }
-            break;
+            break; // when control comes here outer loop breaks
         }
     }
 }

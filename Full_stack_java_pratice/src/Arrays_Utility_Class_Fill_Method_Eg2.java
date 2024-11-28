@@ -11,7 +11,7 @@ public class Arrays_Utility_Class_Fill_Method_Eg2 {
 
         System.out.println();
         System.out.print("arrays fill method :  ");
-        /* from index says from which index you should start
+        /* from index says, from which index you should start
            to index says from which index you should ignore it
            here we want to replace any number from 2 index to 5 index , so end index should be given 6 ,
            so compiler understands from index 6 I should ignore replacing the number .

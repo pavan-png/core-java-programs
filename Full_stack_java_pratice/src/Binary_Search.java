@@ -31,6 +31,7 @@ public class Binary_Search {
                     temp = arr[k];
                     arr[k] = arr[l];
                     arr[l] = temp;
+
                 }
             }
         }

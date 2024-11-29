@@ -3,7 +3,7 @@ public class String_Builder_Eg3 {
         StringBuilder s1 = new StringBuilder("Hello");
 
         /*
-          StringBuilder s2 = " Hey "        cannot declare String builder  like this
+          StringBuilder s2 = " Hey " we cannot declare String builder  like this
         */
 
         s1.append(" everyone ");

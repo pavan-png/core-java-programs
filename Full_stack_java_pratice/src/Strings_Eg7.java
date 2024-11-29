@@ -1,6 +1,6 @@
 public class Strings_Eg7 {
     public static void main(String[] args) {
-        String s = "Hello";
+        String s = new String("Hello");
         s.concat("world");
         s = s.concat("every one");
         s = "guys";

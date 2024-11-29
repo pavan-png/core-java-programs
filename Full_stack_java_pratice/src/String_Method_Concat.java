@@ -1,4 +1,4 @@
-public class String_Method_Concat_Eg2 {
+public class String_Method_Concat {
     public static void main(String[] args) {
         String s1 = "Hello";
 

@@ -6,7 +6,7 @@ public class StringBuffer_Constructor_Eg29 {
         s.append("pavan");
         System.out.println(s.length());
         System.out.println(s.capacity());
-        s.append( " kalyan");
+        s.append( "kalyan");
         System.out.println(s.length());
         System.out.println(s.capacity());
     }

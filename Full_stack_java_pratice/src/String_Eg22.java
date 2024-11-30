@@ -11,5 +11,6 @@ public class String_Eg22 {
         System.out.println("length before trim "+s2.length());
         String s3 = s2.trim();
         System.out.println("length after trim "+s3.length());
+
     }
 }

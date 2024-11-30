@@ -1,5 +1,3 @@
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
 public class String_Eg18 {
     public static void main(String[] args) {
         String s ="Hello";

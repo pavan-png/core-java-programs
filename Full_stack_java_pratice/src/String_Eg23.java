@@ -4,8 +4,8 @@ public class String_Eg23 {
         // gives index of the character
         System.out.println(s.indexOf('w'));
 
-        //when indexOf() method finds first occurance of character index is printed and method terminates .
-        System.out.println(s.indexOf('o'));
+        //when indexOf() method returns the  first occurance .
+        System.out.println(s.indexOf('o')); // index starts from 0.
 
         // if the character is not found it gives -1
         System.out.println(s.indexOf('y'));

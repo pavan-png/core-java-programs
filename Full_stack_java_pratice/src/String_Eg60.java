@@ -6,6 +6,7 @@ public class String_Eg60 {
     }
     private static void change(String s){
         s.concat(" good morning");
+        // reference is not collected so garbage collector will remove the object.
     }
 
 }

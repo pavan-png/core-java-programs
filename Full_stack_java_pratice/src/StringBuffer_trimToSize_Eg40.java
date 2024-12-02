@@ -6,7 +6,7 @@ public class StringBuffer_trimToSize_Eg40 {
         System.out.println(s);
         System.out.println(s.length());
         System.out.println(s.capacity());
-        s.trimToSize(); // cannot use in the print statement
+        s.trimToSize();
         System.out.println(s.capacity());
 
     }

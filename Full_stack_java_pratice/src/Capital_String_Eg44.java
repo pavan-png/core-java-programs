@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Capital_String_Eg44 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the String only in lower case ");
+        System.out.println("Enter the String");
         String s1 = sc.nextLine();
         String s2 ="";
         boolean flag = true;
@@ -33,5 +33,6 @@ public class Capital_String_Eg44 {
             System.out.println("The original String is : " + s1);
             System.out.println("converted to : "+s2);
         }
+
     }
 }

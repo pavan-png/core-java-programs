@@ -5,6 +5,7 @@ public class String_Eg61 {
         System.out.println(str);
     }
     private static void change(StringBuilder s){
+
         s.append(" good morning");
     }
 }

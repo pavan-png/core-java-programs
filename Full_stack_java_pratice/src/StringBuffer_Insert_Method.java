@@ -1,4 +1,4 @@
-public class String_Insert_Method_Overloading_Eg36 {
+public class StringBuffer_Insert_Method {
     public static void main(String[] args) {
         StringBuffer s = new StringBuffer("Helloworld");
         s.insert(5," pavan, ");

@@ -4,6 +4,11 @@ public class String_Eg64 {
 
         // since direct literals evaluation is done at compile time .
         String s2 = "hello" + ""; // so => Hello
+
+        String s3 = "hello pavan";
+        String s4 = "hello"+ " pavan";
+
         System.out.println(s1==s2);
+        System.out.println(s3==s4);
     }
 }

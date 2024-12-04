@@ -4,6 +4,6 @@ public class String_Eg75 {
         String place = "faraway";
         System.out.println(arr[place.indexOf('a',3)]);
         // here counting index start from 3 . and a is  present is 3 index   =>     arr[3]  => 4th
-        
+
     }
 }

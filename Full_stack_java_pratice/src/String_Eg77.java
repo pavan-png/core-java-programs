@@ -1,18 +1,18 @@
 public class String_Eg77 {
     public static void main(String[] args) {
-        String s1 = "Hello";
-        // if tou try to print any object java internally invokes toString() on object.
+        String s1  = "Hello";
         System.out.println(s1.toString());
 
         String  s = null;
        //  System.out.println(s.toString()); cannot perform operations on null NullPointerException.
-        System.out.println(s);
+        System.out.println(s); //
 
       //  String s2 = null +null  leads to compilation error.
+        // since literals are involved compiler will come into picture. since operation cant be performed on null it leads to C.E
 
-        s = s+null;
+        s = null+s;
 
-        // from the above step . we can say that variable,null is concatenated as String.
+        // here though we have performed operation on null s is treated as string so null is treated as string
         System.out.println(s);
 
         // since they are concatenated as Strings . all the String methods can be applied to it.

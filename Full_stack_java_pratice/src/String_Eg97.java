@@ -5,5 +5,6 @@ public class String_Eg97 {
          append is a overloaded method ,null value can be binded to append(StringBuffer) , append(String) . compiler doesn't
          understand where to store null either in String (or) in StringBuffer . so compile time error.
          */
+
     }
 }

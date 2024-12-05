@@ -6,22 +6,28 @@ class Student1{
     /* if you want you can write some extra logic to getter and setter , to restrict the user to give only specific input
       */
     void setName(String name){
+
         this.name = name;
     }
     String getName(){
+
         return name;
     }
 
     void setAge(int age){
+
         this.age = age;
     }
     int getAge() {
+
         return age;
     }
     void setCity(String city){
+
         this.city = city;
     }
     String getCity(){
+
         return city;
     }
 }

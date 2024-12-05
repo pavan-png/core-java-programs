@@ -1,5 +1,3 @@
-
-
 public class String_Eg119 {
     public static void main(String[] args) {
         String s1 = "Javatpoint";

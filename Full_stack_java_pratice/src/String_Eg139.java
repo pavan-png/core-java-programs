@@ -4,7 +4,7 @@ public class String_Eg139 {
         StringBuffer sbuffer = new StringBuffer(string);
         StringBuilder sBuilder = new StringBuilder(string);
         System.out.println(string.equals(sbuffer));
-        // on a string object if ypu are working both of them should be string otherwise false
+        // on a string object if you are working both of them should be string otherwise false
         System.out.println(string.equals(sBuilder));
 
 

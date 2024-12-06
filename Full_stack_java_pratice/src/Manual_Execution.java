@@ -1,10 +1,4 @@
 public class Manual_Execution {
-    static  int  a ;
-    static int b ;
-    static {
-        System.out.println("this is static block");
-    }
-
     int c ;
     int d;
     {
@@ -12,14 +6,21 @@ public class Manual_Execution {
         c = 10;
         d = 20;
     }
+    static void test(){
+        System.out.println("static method");
+    }
     Manual_Execution(){
+
         System.out.println("this is constructor ");
     }
     void disp(){
+
         System.out.println("this is instance method");
     }
     public static void main(String[] args) {
-        System.out.println("this is main method ");
+        Manual_Execution obj = new Manual_Execution();
+        obj.disp();
+        test();
 
     }
 }

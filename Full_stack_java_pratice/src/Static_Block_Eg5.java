@@ -1,6 +1,4 @@
 public class Static_Block_Eg5 {
-
-
     static int x = 7;
 
     public static void main(String[] args) {

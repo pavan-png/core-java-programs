@@ -28,13 +28,9 @@ void disp_Simple_Interest(){
 public class Farmer_Loan{
     public static void main(String[] args) {
         Loan f1 = new Loan();
-        Loan f2 = new Loan();
         f1.input_loan_Details();
         f1.Simple_Interest_Calculate();
         f1.disp_Simple_Interest();
-        f2.input_loan_Details();
-        f2.Simple_Interest_Calculate();
-        f2.disp_Simple_Interest();
 
     }
 }

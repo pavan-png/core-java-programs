@@ -7,13 +7,14 @@ class Payload{ // encapsulated class
         weight =w;
     }
     public String toString(){  // toString() will act as a getter
+
         return Integer.toString(weight);
     }
 }
 public class Static_Method_Eg2 {
     static void changePayload(Payload p){
         p.setWeight(420);/*
-        inside a static method using a reference we call make a call to instance method
+        inside a static method using a reference we can make a call to instance method
         */
     }
     public static void main(String[] args) {

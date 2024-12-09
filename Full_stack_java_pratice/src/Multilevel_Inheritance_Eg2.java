@@ -11,6 +11,9 @@ class A12 extends A11{
 class A13 extends A12{
 
 }
+class A14 extends A13{
+
+}
 public class Multilevel_Inheritance_Eg2{
     public static void main(String[] args) {
         A13 obj = new A13();

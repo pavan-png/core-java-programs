@@ -6,10 +6,6 @@ int b;
         a = 10;
         b = 20;
     }
-
-
-
-
     Parent1(int a , int b){
         System.out.println("this  is parameterized child class constructor");
         this.a = a;

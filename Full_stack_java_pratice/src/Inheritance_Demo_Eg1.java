@@ -3,7 +3,7 @@
     int age = 24;
 
     void disp(){
-        System.out.println("name is "+name +"age is "+ age);
+        System.out.println("name is "+name +" age is "+ age);
     }
 }
 class Inherit2 extends Inherit{

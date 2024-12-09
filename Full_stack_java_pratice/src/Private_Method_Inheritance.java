@@ -1,6 +1,7 @@
 import java.lang.reflect.Method;
 class Check {
     private void private_Method(){
+
         System.out.println("private method");
     }
 }

@@ -37,6 +37,7 @@ class Child112 extends Parent111{
 public class Constructor_Working_During_Inheritance_Eg4 {
     public static void main(String[] args)
     {
+
         Child112 ref = new Child112(1111,2222);
     }
 }

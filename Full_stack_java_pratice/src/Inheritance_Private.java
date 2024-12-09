@@ -5,14 +5,14 @@ class A111{
         this.name = name;
     }
 
-    void disp(){
-        System.out.println("Hello "+name);
+    public String getName() {
+        return name;
     }
 }
 class A112 extends A111{
-
-    public void setName(String name) {
-        this.setName(name);
+    public void disp(){
+        setName("pavan");
+        System.out.println(getName());
     }
 }
 public class Inheritance_Private {

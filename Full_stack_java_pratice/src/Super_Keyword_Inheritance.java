@@ -3,7 +3,7 @@ class A01{
 }
 class B02 extends A01{
    int var = 20;
-   void display(){
+   void disp(){
        System.out.println(" this is class B02");
        System.out.println(super.var);
        System.out.println("-----------------------------------------------------------------------------------");
@@ -21,7 +21,7 @@ public class Super_Keyword_Inheritance {
     public static void main(String[] args) {
         C03 obj = new C03();
         obj.disp();
-        obj.display();
+
 
 
     }

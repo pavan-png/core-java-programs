@@ -18,7 +18,7 @@ public class Tight_And_Loose_Coupling {
 
         Child01 obj = new Child01();
         obj.disp();
-        Parent00 obj1 = new Child01();
+        Parent00 obj1 = new Child11();
         obj1.disp();
         Child11 obj2 = new Child11();
         obj2.disp();

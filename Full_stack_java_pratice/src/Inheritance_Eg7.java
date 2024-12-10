@@ -15,7 +15,7 @@ public  int a = 8; // instance variable   there is no concept of variable overri
         Foo_1 obj = new Inheritance_Eg7(); // loose coupling
         obj.add_Five(); // call will be decided by jvm because it is overriding method . and jvm execute method based on runtime object i.e Inheritance_Eg7
         System.out.println(obj.a);
-        // since aa is present in both parent and child compiler only wil bind based on reference type .
+        // since variable a is present in both parent and child compiler will bind based on reference type .
         // here reference type is Foo_1
 
     }

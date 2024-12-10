@@ -42,8 +42,8 @@ class Airport{
 }
 public class Loose_Coupling_Polymorphism {
     public static void main(String[] args) {
-        Cargo_plane ref = new Cargo_plane();
-        Passenger_plane1 ref1 = new Passenger_plane1();
+        Plane1 ref = new Cargo_plane();
+        Plane1 ref1 = new Passenger_plane1();
         Airport ref2 = new Airport();
         ref2.runway(ref);
         ref2.runway(ref1);

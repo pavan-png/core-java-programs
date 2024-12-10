@@ -30,6 +30,7 @@ public class Downcasting_Upcasting {
         obj.sales();
         obj.model();
         ((Classic350)obj).maintainence();
+        // since maintainence is a specialized method it cannot be called with parent reference. so it is  typecasted.
         Royal_Enfield obj1 = new gt650();
         obj1.model();
         ((gt650)obj1).maintainence();

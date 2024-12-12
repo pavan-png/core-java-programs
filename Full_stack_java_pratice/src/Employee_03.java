@@ -9,13 +9,14 @@
      public String getEmp_Name(){
          return emp_Name;
      }
+
      public void setEmp_Id(String emp_Id){
          this.emp_Id = emp_Id;
      }
-
      public String getEmp_Id(){
          return emp_Id;
      }
+
      public void setEmp_Address(String emp_Address){
          this.emp_Address = emp_Address;
      }

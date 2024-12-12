@@ -8,6 +8,7 @@ this.branch_Name = branch_Name;
 public String getBranch_Name(){
     return branch_Name;
 }
+
 public void setBraanch_Id(String braanch_Id){
     this.braanch_Id = braanch_Id;
 }

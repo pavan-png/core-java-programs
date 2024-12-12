@@ -11,17 +11,17 @@ public class Many_One_Association_Using_Setters_Getters {
         student_01.setBranch(branch);
 
         Student_01 student_02 = new Student_01();
-            student_02.setStudent_Name("Anand");
-            student_02.setStudent_Id("#W145");
-            student_02.setStudent_Address("Vijayawada");
-            student_02.setBranch(branch);
+        student_02.setStudent_Name("Anand");
+        student_02.setStudent_Id("#W145");
+        student_02.setStudent_Address("Vijayawada");
+        student_02.setBranch(branch);
 
 
-            Student_01 student_03 = new Student_01();
-            student_03.setStudent_Name("Guru");
-            student_03.setStudent_Id("#I879");
-            student_03.setStudent_Address("Vijayawada");
-            student_03.setBranch(branch);
+        Student_01 student_03 = new Student_01();
+        student_03.setStudent_Name("Guru");
+        student_03.setStudent_Id("#I879");
+        student_03.setStudent_Address("Vijayawada");
+        student_03.setBranch(branch);
 
         System.out.println("================the student details are======================= ");
         System.out.println("the student name is : "+ student_01.getStudent_Name());

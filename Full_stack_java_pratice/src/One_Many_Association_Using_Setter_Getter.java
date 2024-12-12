@@ -18,7 +18,6 @@ public class One_Many_Association_Using_Setter_Getter {
         emp_03.setEmp_Address("875-Z");
 
 
-
         Department_1 department_1 = new Department_1();
         department_1.setDepartment_Id(128 );
         department_1.setDepartment_Name("IT");

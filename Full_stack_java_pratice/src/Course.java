@@ -1,5 +1,5 @@
 public class Course {
-   private  String course_Name;
+    private String course_Name;
     private String course_Id;
     private String course_Cost;
     public Course(String course_Name, String course_Id, String course_Cost){
@@ -11,7 +11,6 @@ public class Course {
     public String getCourse_Name(){
         return course_Name;
     }
-
     public String getCourse_Id() {
         return course_Id;
     }

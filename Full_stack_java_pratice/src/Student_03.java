@@ -1,9 +1,9 @@
 public class Student_03 {
-   private String student_Name;
+    private String student_Name;
     private String student_Id;
     private String student_Address;
-
     private Course[] courses;
+
     public  Student_03(String student_Name, String student_Id, String student_Address, Course[] courses){
         this.student_Name = student_Name;
         this.student_Id = student_Id;

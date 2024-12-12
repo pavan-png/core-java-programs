@@ -13,7 +13,6 @@
     public  String getAcc_Holder_Name(){
         return acc_Holder_Name;
     }
-
     public String getAcc_Type(){
         return acc_Type;
     }

@@ -2,7 +2,7 @@
     private String student_Name;
     private String student_Id;
     private String student_Address;
-   private Branch_01 branch_01;
+    private Branch_01 branch_01;
 
     public Student_02(String student_Name , String student_Id, String student_Address, Branch_01 branch_01){
         this.student_Name = student_Name;

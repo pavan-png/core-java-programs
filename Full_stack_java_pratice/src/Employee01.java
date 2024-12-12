@@ -2,8 +2,7 @@
     private  String emp_Name;
     private  Integer emp_Id;
     private  String  emp_Address;
-
-   private  Account01 account01;
+    private  Account01 account01;
 
     public Employee01(String emp_Name , Integer emp_Id , String emp_Address , Account01 account01){
         this.emp_Name = emp_Name;

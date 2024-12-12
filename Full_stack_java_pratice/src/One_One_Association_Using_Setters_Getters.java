@@ -4,6 +4,7 @@ public class One_One_Association_Using_Setters_Getters {
         account_011.setAcc_No(123456);
         account_011.setAcc_Holder_Name("pavan");
         account_011.setAcc_Type("savings bank");
+
         Employee_011 employee_011 = new Employee_011();
         employee_011.setEmp_Name("pavan");
         employee_011.setEmp_Id(8796);

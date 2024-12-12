@@ -16,9 +16,9 @@ class Child11 extends Parent00{
 public class Tight_And_Loose_Coupling {
     public static void main(String[] args) {
 
-        Child01 obj = new Child01();
+        Child01 obj = new Child01(); // tightly coupled
         obj.disp();
-        Parent00 obj1 = new Child11();
+        Parent00 obj1 = new Child11(); // loose coupling
         obj1.disp();
         Child11 obj2 = new Child11();
         obj2.disp();

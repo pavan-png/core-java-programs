@@ -13,11 +13,17 @@ class Shape_1{
             System.out.println("isDisplayed : "+isDisplayed);
             System.out.println("canvasId "+canvasId);
         }
+
+        public static void main(String[] args) {
+            Shape_1.Color_1 obj = new Shape_1().new Color_1();
+            obj.display();
+        }
     }
 }
 public class Inner_Class_Eg3 {
     public static void main(String[] args) {
         Shape_1.Color_1 obj = new Shape_1().new Color_1();
-        obj.display();
+        // we can have main method in the inner class but it is of no use.
+        // compiler will only check foe the main() in the outer class
     }
 }

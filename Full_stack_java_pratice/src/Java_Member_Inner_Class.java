@@ -16,5 +16,7 @@ public class Java_Member_Inner_Class {
         // And since class Inner is non-static , non-static members are called using object . so obj.new Inner()
         Outer.Inner obj1 = obj.new Inner();
         obj1.print_Data();
+
+
     }
 }

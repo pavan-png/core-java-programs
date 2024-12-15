@@ -15,7 +15,9 @@ public class Inner_Class_Eg2 {
      if new operator is not given with color constructor , compiler treats color as a method and searches for it
      in the class. which leads to compile time error
       */
-
+        Shape.Color obj1 = new Shape().new Color();
+        Shape obj2 = new Shape();
+        Shape.Color obj3 = obj2.new Color();
 
     }
 }

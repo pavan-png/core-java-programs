@@ -11,7 +11,7 @@ class SampleImpl implements  ISample{
 
     @Override
     public void m2() {
-        System.out.println("Hello this iss method m2");
+        System.out.println("Hello this is method m2");
     }
 }
 

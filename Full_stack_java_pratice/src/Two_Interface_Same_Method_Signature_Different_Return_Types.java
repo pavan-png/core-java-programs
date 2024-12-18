@@ -1,19 +1,29 @@
 interface IRight{
-    void methodOne();
+    int  m1();
 }
 interface ILeft{
-    int methodOne();
+    int m1();
 }
- /*          class StraightImpl implements IRight,ILeft{
+/*
+class StraightImpl implements IRight,ILeft{
+
     @Override
-    public void methodOne() {
+
+    public void m1() {
 
     }
-    public int methodOne(){
 
+    @Override
+    public int m1(){
+
+        return 10;
     }
 
-}       */
+
+
+}
+
+ */
  public class Two_Interface_Same_Method_Signature_Different_Return_Types {
      public static void main(String[] args) {
 

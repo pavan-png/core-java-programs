@@ -10,7 +10,7 @@ public class Variable_Naming_Conflicts implements  ITop , IBottom {
 
     public static void main(String[] args) {
     //     System.out.println(a);  compile time error
-        System.out.println(ITop.a);
+        System.out.println(ITop.a); // variables are public static final by default
         System.out.println(IBottom.a);
     }
 }

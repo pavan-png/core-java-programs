@@ -9,7 +9,7 @@ public class Interface_Variable_Vs_Local_Variable  implements ILocal{
         // between local variable and Static final variable with same name , the priority is always for local variable.
         System.out.println(a);
 
-        // to access the interface variable
+        // to access the interface variable use the interface name since it is static
         System.out.println(ILocal.a);
     }
 }

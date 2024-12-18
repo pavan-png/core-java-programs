@@ -4,9 +4,11 @@ String name;
 Integer age;
 Float height;
 Person_100(String name , Integer age , Float height){
+    System.out.println("abstract class constructor");
     this.name = name;
     this.age = age;
     this.height = height;
+
 }
 }
 class Student_101 extends Person_100{

@@ -6,13 +6,13 @@ interface Sample{
     }
     default void disp_1(){
         System.out.println();
-        System.out.println(" this  is display-2 method of sample interface ");
+        System.out.println(" this is display-2 method of sample interface");
         System.out.println("=======================================================");
     }
 
 
     /*
-    from java 8 inside interface we can have static methods .
+    from java 8 inside interface we can have static methods.
     it will not participate in the inheritance in the inherited classes.
      */
     // default modifier cannot be used for static method of interface
@@ -86,6 +86,7 @@ public class Interface_Concrete_Static_Private_Methods {
 
         // to invoke static methods of interface call with Interface.methodName
         Sample.disp_2();
+        
 
 
     }

@@ -13,6 +13,7 @@ public class Reverse_The_String_2_Eg48 {
             }
             s2 = s2 + " ";
         }
+        System.out.println(s2);
 
         String[] arr1 = s2.split(" ");
         for (int i =0 ; i< arr1.length;i++){

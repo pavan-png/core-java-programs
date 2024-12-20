@@ -10,8 +10,8 @@ interface DoNothing{
 }
 //functional interface
 interface DontDoAnything extends DoNothing{
-    /* default doNothing method is present in DontDoNothing interface since there is a parent child relation.
-but there is only one abstract method in the interface , in an interface has only one abstract method it is a
+    /* default doNothing() method is present in DontDoNothing interface since there is a parent child relation.
+but there is only one abstract method in the interface, in an interface has only one abstract method it is a
 functional interface
      */
     public abstract void doNothing();
@@ -20,7 +20,7 @@ functional interface
 public class Interface_Eg3 {
     public static void main(String[] args) {
         //lambda expression is always binded to abstract method
-        DontDoAnything obj =() ->{
+        DontDoAnything obj =()->{
             System.out.println("iam idle");
         };
         obj.doNothing();

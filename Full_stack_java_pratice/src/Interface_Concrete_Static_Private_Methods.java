@@ -86,7 +86,7 @@ public class Interface_Concrete_Static_Private_Methods {
 
         // to invoke static methods of interface call with Interface.methodName
         Sample.disp_2();
-        
+
 
 
     }

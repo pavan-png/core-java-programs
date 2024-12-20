@@ -28,7 +28,7 @@ class Beta  {
         obj.handle();
     }
 }
-public class Ducking_Exceptional_Handling {
+public class Ducking_Exception {
     public static void main(String[] args) {
        try {
            Beta obj1 = new Beta();

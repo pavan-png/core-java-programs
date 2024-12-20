@@ -15,7 +15,5 @@ public class Exceptional_Handling_Try_Catch {
             System.out.println("dividing by zero is illegal");
         }
         System.out.println("connection terminated normally");
-
-
     }
 }

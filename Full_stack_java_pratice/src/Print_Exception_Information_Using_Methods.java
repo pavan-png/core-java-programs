@@ -38,7 +38,7 @@ public class Print_Exception_Information_Using_Methods{
             System.out.println("incorrect input");
             System.out.println("by using getMessage() "+e.getMessage());
             System.out.println("by using tostring() "+ e.toString());
-            System.out.println("by is printStackTrace ");
+            System.out.println("by using printStackTrace ");
             e.printStackTrace();
 
         }

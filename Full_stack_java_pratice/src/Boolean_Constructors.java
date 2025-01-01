@@ -13,8 +13,7 @@ public class Boolean_Constructors {
         System.out.println(b5);
         */
 
-        // String input => case is not important , content is important.
-        // String input => case in-sensitive of true is treated as true other cases are treated as false
+        // String input => case is not important, content is important.
 
         Boolean b6 = new Boolean("true");
         System.out.println("b6  :"+b6);

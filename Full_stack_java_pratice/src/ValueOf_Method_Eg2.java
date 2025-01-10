@@ -21,6 +21,10 @@ public class ValueOf_Method_Eg2 {
         System.out.println(i3);
         // if exception occurs execution will terminate without executing further code.
 
+        Integer i6 = Integer.valueOf("10",5);
+        System.out.println(i6);
+
+
 
     }
 }

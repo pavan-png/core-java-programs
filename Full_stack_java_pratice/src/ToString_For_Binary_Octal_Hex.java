@@ -1,7 +1,6 @@
 public class ToString_For_Binary_Octal_Hex {
     public static void main(String[] args) {
 
-
         String s1 = Integer.toBinaryString(22);
         String s2 = Integer.toOctalString(74);
         String s3 = Integer.toHexString(45);

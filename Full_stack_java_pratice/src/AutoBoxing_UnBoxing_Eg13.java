@@ -10,6 +10,11 @@ public class AutoBoxing_UnBoxing_Eg13 {
     }
     int  go(Boolean b , int i ){
         if(b) return ( i/7); // return 343/7
+        /*
+         only one return statement works. if the above if condition evaluates to true if block executes
+        and return statement of if block executes
+        otherwise return statement outside if is executed
+         */
         return (i/49);
     }
 }

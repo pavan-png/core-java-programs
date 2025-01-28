@@ -1,6 +1,6 @@
 public class Two_Dimensional_Array_Var_Args {
 
-    void m1(int[]... x){
+    void m1(int[]... x){  // 2d array
         System.out.println(x);
         for (int[] a:x) {
             System.out.println(a);

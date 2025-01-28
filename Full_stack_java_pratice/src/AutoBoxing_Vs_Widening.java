@@ -11,5 +11,8 @@ public class AutoBoxing_Vs_Widening {
      int x = 10; // compiler will do implicit type casting .
         // x is int (primitive)  =======> typecasting ===========> Long .
      m1(x);
+     /*
+     the first preference will always be for typecasting/widening
+      */
     }
 }

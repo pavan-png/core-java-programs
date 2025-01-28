@@ -1,6 +1,11 @@
 class Variable_Arguments{
     public void add(int... x){
-        System.out.println("variable arguments ");
+
+      for(int a:x){
+          System.out.println("variable arguments "+a);
+      }
+
+
 
     }
 }

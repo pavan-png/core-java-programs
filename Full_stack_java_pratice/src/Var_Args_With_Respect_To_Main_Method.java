@@ -9,7 +9,7 @@ public class Var_Args_With_Respect_To_Main_Method {
     }
      */
 
-    public static void main(String[]... args) {
+    public static void main(String[]... args) { // 2d string array
         System.out.println("hello");
     }
 

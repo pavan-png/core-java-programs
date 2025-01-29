@@ -9,5 +9,6 @@ public class Anonymous_Object_Eg1 {
     }
     void incr(int squares){
         squares +=10;
-    }
+    } // here squares is a local variable, scope is only until this block execution
+    // gets completed.
 }

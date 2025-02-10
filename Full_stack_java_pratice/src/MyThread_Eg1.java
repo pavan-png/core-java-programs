@@ -10,7 +10,7 @@ class Thread {
         }
 
  */
-class Mythread extends Thread{
+class Thread_Eg1 extends Thread{
     @Override
     // task for user defined thread
     public void run() {
@@ -20,9 +20,9 @@ class Mythread extends Thread{
         }
     }
 }
-public class Thread_Eg1 {
+public class MyThread_Eg1 {
     public static void main(String[] args) {
-        Mythread obj = new Mythread();
+        Thread_Eg1 obj = new Thread_Eg1();
 
         // this line will create a new thread which is responsible to execute run()
         obj.start();

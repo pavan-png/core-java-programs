@@ -19,7 +19,7 @@ public class Join_Method_Eg1 {
         t.start();
         t.join(3000);
         /* if the above line is commented we cant predict the output because it is  the duty of the thread scheduler
-        to assign ccpu time
+        to assign cpu time
         if the above line is not commented then main thread will enter into waiting state till child thread finishes its
         execution.
 

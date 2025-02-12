@@ -2,7 +2,7 @@ class Mythread_9 extends Thread{
     @Override
     public void run() {
         for (int i = 1 ; i<=5; i++){
-            System.out.println("child thread");
+            System.out.println("child thread" +Thread.currentThread().getPriority());
             Thread.yield();
         }
     }
@@ -12,7 +12,7 @@ public class Yeild_Method {
         Mythread_9 t = new Mythread_9();
         t.start();
         for (int i = 1 ; i<=5 ; i++){
-            System.out.println("main thread");
+            System.out.println("main thread"+Thread.currentThread().getPriority());
         }
     }
 }

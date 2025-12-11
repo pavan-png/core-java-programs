@@ -10,8 +10,6 @@ public class Char_To_Int {
         System.out.println(d);
 
 
-
-
     }
 }
 

@@ -1,4 +1,4 @@
-public class Command_Line_Arguments_1 {
+public class Command_Line_Arguments_Eg1 {
     public static void main(String[] args) {
 
         if (args.length < 2) {

@@ -1,40 +1,69 @@
 public class Incrementation_1 {
     public static void main(String[] args) {
+
         int a = 7;
-       //Rule1:  incrementation will be done whether it is post (or) pre o/p will be same . if declared as below
-        a++; // (or) ++a same output  ,  ouput will be 8
-        System.out.println( a );
 
-        //Rule 2:  if increment is directly written in the print statement , and if it is post increment first a is printed
-        //  and then incremented , output will be  8 and a incremented to 9
-        System.out.println( "post increment in print statement " + a++);
+        // Rule 1:
+        // If incrementation is written as a separate statement,
+        // both post-increment (a++) and pre-increment (++a) give the SAME final value.
+        // Here, a becomes 8.
+        a++;  // (or) ++a would also make a = 8
+        System.out.println(a); // prints 8
 
-        // if it is pre increment first incremented and then printed , output is 10
-        System.out.println( "pre increment in print statement  " + ++a);
 
-        // Rule 3 :  whenever post incrementation is assigned to variable first r.h.s variable
-        // is stored in l.h.s and then incremented , output is 10 and incremented to 11
+
+        // Rule 2:
+        // Post-increment inside print statement:
+        // First the CURRENT value is printed, then it is incremented.
+        // So it prints 8, and then a becomes 9.
+        System.out.println("post increment in print statement " + a++);
+
+
+
+        // Pre-increment inside print statement:
+        // First increment happens, then the incremented value is printed.
+        // a was 9 → becomes 10 → prints 10
+        System.out.println("pre increment in print statement  " + ++a);
+
+
+
+        // Rule 3:
+        // Post-increment while assigning:
+        // First the OLD value of a goes to b, then a is incremented.
+        // a was 10 → b gets 10 → then a becomes 11
         int b = a++;
-        System.out.println("post incrementation after assigning " + b);
-        // here were are printing incremented variable , not the one which is assigned
-        // so output will be 11
-        System.out.println("post incremented and printing incremented variable ,but not assigned one "+a);
+        System.out.println("post incrementation after assigning " + b); // prints 10
 
-        //Rule 4 : whenever pre increment is assigned to variable first incremented and then stored
-        // in l.h.s  , output is 12
+        // Now printing a (which is incremented),
+        // so this prints 11
+        System.out.println("post incremented and printing incremented variable ,but not assigned one " + a);
+
+
+
+        // Rule 4:
+        // Pre-increment while assigning:
+        // First a is incremented, then the incremented value is stored in c.
+        // a was 11 → becomes 12 → c = 12
         int c = ++a;
-        System.out.println("pre increment after assigning to c is "+c);
+        System.out.println("pre increment after assigning to c is " + c); // prints 12
+        System.out.println(a); // prints 12
+
+
+
+        // Complex Expression:
+        // a is currently 12
+        //
+        // a++ → returns 12, then a becomes 13
+        // a++ → returns 13, then a becomes 14
+        // ++a → a becomes 15, returns 15
+        //
+        // So d = 12 + 13 + 15 = 40
+        int d = a++ + a++ + ++a;
+
+        // Printing final value of a which is 15
         System.out.println(a);
 
-        int d = a++ + a++ + ++a ;
-        // prints  the incremented value of a o/p is 15
-        System.out.println(a);
-
-        // adds the incremented value every time and stores in d
-        System.out.println("value of d is : "+d);
-
-
-
-
+        // Printing calculated value of d which is 40
+        System.out.println("value of d is : " + d);
     }
 }

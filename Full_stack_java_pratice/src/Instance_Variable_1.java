@@ -1,15 +1,23 @@
 public class Instance_Variable_1 {
-    boolean b ;
-    char c ;
-    int i = 10;
+
+    // Instance variables (stored inside object in heap)
+    boolean b;      // default value: false
+    char c;         // default value: '\u0000' (null character)
+    int i = 10;     // explicitly initialized
+
     public static void main(String[] args) {
-     Instance_Variable_1   obj= new Instance_Variable_1();
-        System.out.println(obj.b);
-        System.out.println(obj.c);
-        System.out.println(obj.i);
+
+        // Reference variable 'obj' holds the identity (reference) of the heap object
+        Instance_Variable_1 obj = new Instance_Variable_1();
+
+        // Accessing instance variables using reference variable
+        System.out.println(obj.b); // prints false
+        System.out.println(obj.c); // prints blank (null character)
+        System.out.println(obj.i); // prints 10
     }
-    // scope of reference variable "obj" is  only until this line . once control comes to this line the reference
-    // variable obj loses its value i.e (hashcode)
 
-
+    // Scope of reference variable 'obj' is only within the main() method.
+    // Once execution leaves main(), the reference variable goes out of scope.
+    // The object becomes eligible for garbage collection
+    // IF no other references are pointing to it.
 }

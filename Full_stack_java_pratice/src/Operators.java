@@ -1,17 +1,69 @@
 public class Operators {
     public static void main(String[] args) {
+
         int mask = 0;
-        int count =0;
-        // here since 5<7 evaluates to true next condition (count) is not evaluated , and since | ( bitwise or operator )
-        // evaluates both conditions mask is also evaluated
-        // here mask is first used to check condition and then incremented
-        if(((5<7) || (++count>1))| mask++<10) mask = mask+1;
+        int count = 0;
 
-        //go through the table
-        if((6>8)^false) mask= mask +10;
+        /*
+         IF–1 FLOW:
+         ----------
+         (5 < 7) → true
 
-        // here mask is  greater than 1  but since ! it evaluates to false ,  short circuit AND operator will not check other condition , if first condition is false
-        if(!(mask>1) && ++count >1) mask = mask +100;
+         || is short-circuit OR
+         → second operand (++count > 1) is NOT evaluated
+         → count remains 0
+
+         | is bitwise OR (no short-circuit)
+         → mask++ < 10 IS evaluated
+
+         mask++ < 10:
+         → use mask = 0 → 0 < 10 → true
+         → then increment → mask becomes 1
+
+         true | true → true
+         → if block executes
+         → mask = mask + 1 → mask becomes 2
+        */
+        if (((5 < 7) || (++count > 1)) | mask++ < 10)
+            mask = mask + 1;
+
+        /*
+         IF–2 FLOW:
+         ----------
+         6 > 8 → false
+
+         ^ is XOR
+         false ^ false → false
+
+         → condition fails
+         → mask is unchanged
+        */
+        if ((6 > 8) ^ false)
+            mask = mask + 10;
+
+        /*
+         IF–3 FLOW:
+         ----------
+         mask = 2
+
+         mask > 1 → true
+         !(true) → false
+
+         && is short-circuit AND
+         → since first condition is false,
+           ++count > 1 is NOT evaluated
+
+         → count remains 0
+         → if block does not execute
+        */
+        if (!(mask > 1) && ++count > 1)
+            mask = mask + 100;
+
+        /*
+         FINAL STATE:
+         mask  = 2
+         count = 0
+        */
         System.out.println(mask + " " + count);
     }
 }

@@ -1,18 +1,28 @@
 public class Instance_Variable_2 {
+
+    // Instance variable (stored inside object in heap)
     int i = 10;
 
-//  driving code -> automatically called by jvm.
+    // Driving code → JVM starts execution from main()
     public static void main(String[] args) {
-        // System.out.println(i); compile time error
-        // cannot access instance variable without object (or) non-static field cannot be referenced from static context
-        Instance_Variable_2 obj = new Instance_Variable_2();// object created i =10 stored in heap area
-        // to access the i value stored in heap area , we use reference variable obj ,the reference variable contains
-        // hashcode (address) of heap area.
+
+        // System.out.println(i);
+        // ❌ Compile-time error:
+        // Cannot access instance variable directly from static context
+
+        // Object creation
+        // Heap memory is allocated and instance variable 'i' is initialized to 10
+        Instance_Variable_2 obj = new Instance_Variable_2();
+
+        // Reference variable 'obj' holds the reference (identity) of the heap object
+        // Using the reference, we can access instance variables
         System.out.println(obj.i);
     }
-    public void methodOne(){
-        // inside instance method instance variable can be directly accessed without object//.
+
+    public void methodOne() {
+
+        // Inside an instance method, instance variables can be accessed directly
+        // because the method is invoked using an object
         System.out.println(i);
     }
 }
-

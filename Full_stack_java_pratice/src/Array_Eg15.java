@@ -1,10 +1,9 @@
-public class Array_Eg15 {
+public class Array_Eg17 {
     public static void main(String[] args) {
-        int[][] a = new int[3][4];
+        int[][] arr = new int[3][2];
+        arr[0] = new int[3];
+        arr[1] = new int[4];
+        arr = new int[4][3];
 
-        // since trying to print 2-dimensional array [[ brackets and hex code ils printed
-        System.out.println(a);
-        System.out.println(a[0]);
-        System.out.println(a[0][0]);
     }
 }

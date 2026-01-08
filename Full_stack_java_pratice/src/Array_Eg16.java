@@ -1,8 +1,9 @@
-public class Array_Eg16 {
+public class Array_Eg18 {
+    int[] a ;
     public static void main(String[] args) {
-        int [][] a = new int[2][];
-        System.out.println(a);
-        System.out.println(a[0]); //
-        System.out.println(a[0][0]);
+        Array_Eg18 t1 = new Array_Eg18();
+        System.out.println(t1.a);
+        System.out.println(t1.a[0]);
+
     }
 }

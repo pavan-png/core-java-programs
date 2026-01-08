@@ -1,18 +1,17 @@
-public class Array_Eg20 {
-    int[] a ;
+public class Array_Eg22 {
+    String[] x  ;
+    // String[] x = new String[] { "Hello"};
+    int[] a[] = {{1,2},{1}};
+    Object c = new long[4]; //parent reference child object, but binding is done by jvm based on runtime object
+
+    // since x is a instance variable default value is applied to it and no error ,
+    // if the same is declared in the main method , it shows error since not intialized since variables must be intialized before its use .
+    // both below lines have  valid syntax.
+    Object d = x;
+    // Object[] d = x;
     public static void main(String[] args) {
-        int b[];
-        /* if array is declared locally without declaring the size, and if we try to access it, it leads to
-         compile time error. if it is declared at class level if and we try to print we will get default value
-         null.
-
-         */
-       // System.out.println(b);
-
-        Array_Eg20 obj = new Array_Eg20();
-        System.out.println(obj.a);
-        System.out.println(obj.a[0]);
-
+        Array_Eg22 obj = new Array_Eg22();
+        System.out.println(obj.c);
 
     }
 }

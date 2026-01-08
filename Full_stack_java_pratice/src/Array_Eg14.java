@@ -1,11 +1,10 @@
-public class Array_Eg14 {
+public class Array_Eg15 {
     public static void main(String[] args) {
-        int[] a = new int[3];
+        int[][] a = new int[3][4];
 
-        // prints default hex  code value for int type of array
+        // since trying to print 2-dimensional array [[ brackets and hex code ils printed
         System.out.println(a);
-
-        // print default value of int for 0th position
         System.out.println(a[0]);
+        System.out.println(a[0][0]);
     }
 }

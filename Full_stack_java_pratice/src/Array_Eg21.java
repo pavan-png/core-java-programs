@@ -1,15 +1,37 @@
-public class Array_Eg21 {
+public class Array_Eg23 {
+
     public static void main(String[] args) {
-        int[][] a = {{1,2},{3,4}};
-        int[] b = (int[]) (a[1]); // we can type cast from 2d array to 1d array.
-        Object o1 = a;
-        int[][]  a2 = (int[][]) (o1); /*
-         implicit type casting cannot be done from object to array. so done explicitly
-         to type cast there must be parent to child (or) child to parent relation. object is a
-         higher type and array is a lower type, so explicit typecasting is done
-        */
-        System.out.println(b[1]);
-        System.out.println(b);
-        System.out.println(o1);
+
+        // 2D array of Strings
+        // arr has 2 rows:
+        // Row 0 -> {"%", "***"}
+        // Row 1 -> {"!!!!", "@@@@@", "######"}
+        String[][] arr = {
+                {"%", "***"},
+                {"!!!!", "@@@@@", "######"}
+        };
+
+        // Outer for-each loop:
+        // 'str' represents ONE complete row at a time (String[])
+        for (String[] str : arr) {
+
+            // Inner for-each loop:
+            // 's' represents ONE element inside the current row
+            for (String s : str) {
+
+                // Print the current string
+                System.out.println(s);
+
+                // If the length of the string is exactly 4
+                // example: "!!!!"
+                if (s.length() == 4)
+                    break; // breaks ONLY the INNER loop
+            }
+
+            // Control comes here after inner loop ends
+            // This break stops the OUTER loop completely
+            // So no further rows are processed
+            break;
+        }
     }
 }

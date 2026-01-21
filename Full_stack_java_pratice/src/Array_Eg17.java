@@ -1,4 +1,4 @@
-public class Array_Eg19 {
+public class Array_Eg17 {
 
     // Instance variable 'a'
     // An int array object of size 3 is created using 'new'
@@ -9,7 +9,7 @@ public class Array_Eg19 {
 
         // Create an object of Array_Eg19
         // Instance variable 'a' is already initialized
-        Array_Eg19 t1 = new Array_Eg19();
+        Array_Eg17 t1 = new Array_Eg17();
 
         // Prints the reference value of array 'a'
         // This will print something like: [I@1a2b3c4 (hashcode value)

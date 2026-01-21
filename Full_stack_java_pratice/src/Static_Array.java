@@ -1,13 +1,20 @@
 public class Static_Array {
-    private static int[] arr ;
-    /*
-    static variable will get the life during the loading of class so arr = null
-    */
+
+    // Static array reference variable
+    // Static variables are created when the class is loaded
+    // Default value for any reference type is NULL
+    private static int[] arr;
+
     public static void main(String[] args) {
-        if ( arr.length>0 && arr != null)
-            /*
-            here on a null we are trying to perform operation (arr.length)  which leads to NullPointerException
-            */
+
+        // Condition check
+        // PROBLEM:
+        // arr is NULL, but arr.length is accessed first
+        // Accessing any member on NULL causes NullPointerException
+        if (arr.length > 0 && arr != null)
+
+            // This line will never be reached
+            // because exception occurs before condition completes
             System.out.println(arr[0]);
     }
 }

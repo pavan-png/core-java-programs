@@ -1,25 +1,51 @@
-import java.util.Arrays;
+import java.util.Arrays;   // Imports Arrays utility class
 
 public class Arrays_Utility_Class_Fill_Method_Eg2 {
+
     public static void main(String[] args) {
-        int[] arr = {1,2,3,0,0,0,5,6};
+
+        // Initializing an integer array with predefined values
+        int[] arr = {1, 2, 3, 0, 0, 0, 5, 6};
+
+        // Printing the original array before using Arrays.fill()
         System.out.print("original array is : ");
-        for (int i :arr){
-            System.out.print(i +"  ");
+        for (int i : arr) {
+            System.out.print(i + "  ");
         }
-        // using arrays fill method to store numbers in a particular index range
 
+        // Line break for output clarity
         System.out.println();
-        System.out.print("arrays fill method :  ");
-        /* from index says, from which index you should start
-           to index says from which index you should ignore it
-           here we want to replace any number from 2 index to 5 index , so end index should be given 6 ,
-           so compiler understands from index 6 I should ignore replacing the number .
-         */
-        Arrays.fill(arr,3,6,4);
-        for (int i :arr){
-            System.out.print(i+"  ");
-        }
 
+        // Message before applying Arrays.fill() on a specific range
+        System.out.print("arrays fill method :  ");
+
+        /*
+         * Arrays.fill(array, fromIndex, toIndex, value)
+         *
+         * fromIndex (inclusive) :
+         *   - Starting index from which the value replacement begins
+         *
+         * toIndex (exclusive) :
+         *   - Ending index which is NOT included in replacement
+         *
+         * Important:
+         *   Replacement happens from fromIndex up to (toIndex - 1)
+         *
+         * In this example:
+         *   fromIndex = 3
+         *   toIndex   = 6
+         *   value     = 4
+         *
+         * So elements at index 3, 4, and 5 will be replaced by 4
+         * Index 6 and above will remain unchanged
+         */
+
+        // Filling array elements from index 3 to index 5 with value 4
+        Arrays.fill(arr, 3, 6, 4);
+
+        // Printing the array after applying Arrays.fill()
+        for (int i : arr) {
+            System.out.print(i + "  ");
+        }
     }
 }

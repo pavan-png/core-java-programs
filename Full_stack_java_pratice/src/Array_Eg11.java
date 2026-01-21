@@ -1,4 +1,4 @@
-public class Array_Eg12 {
+public class Array_Eg11 {
     public static void main(String[] args) {
 
         // 2D String array (Array of arrays)

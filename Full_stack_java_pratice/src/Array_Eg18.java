@@ -1,4 +1,4 @@
-public class Array_Eg20 {
+public class Array_Eg18 {
 
     // Instance variable (class-level)
     // This is only a reference variable
@@ -23,7 +23,7 @@ public class Array_Eg20 {
 
         // Create an object of Array_Eg20
         // Instance variable 'a' gets default value null
-        Array_Eg20 obj = new Array_Eg20();
+        Array_Eg18 obj = new Array_Eg18();
 
         // Printing a reference variable is allowed
         // Output: null

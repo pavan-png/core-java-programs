@@ -1,21 +1,31 @@
 public class Method_With_Return_Type_And_Parameters {
-    // properties , fields ,instance variables
+
+    // Instance variable (field)
+    // Each object of this class has its own copy of 'c'
     int c;
 
-    // method , activity , behaviour , does-part
-    // if variables are declared inside class and used in the method as parameter . it will show data type error .
-    // so declare with datatypes in the parameter.
-    int  add( int a, int b){ // parameters
-        c = a+b;
-        return c;
+    // Instance method with return type and parameters
+    // This method takes two integer parameters and returns their sum
+    int add(int a, int b) {   // parameters
+        c = a + b;           // result stored in instance variable
+        return c;            // return the calculated value
     }
 
     public static void main(String[] args) {
-        Method_With_Return_Type_And_Parameters obj = new Method_With_Return_Type_And_Parameters();
-        int result  = obj.add(10,20); // arguments
-        //if the method returns anything it is optional whether to collect it or not
+
+        // Creating an object of the class
+        Method_With_Return_Type_And_Parameters obj =
+                new Method_With_Return_Type_And_Parameters();
+
+        // Calling the add() method with arguments
+        // The returned value is stored in the variable 'result'
+        int result = obj.add(10, 20);   // arguments
+
+        // Printing the returned result
         System.out.println(result);
 
+        // Note:
+        // If a method returns a value, collecting it is optional
+        // obj.add(10, 20);  // return value ignored (also valid)
     }
-
 }

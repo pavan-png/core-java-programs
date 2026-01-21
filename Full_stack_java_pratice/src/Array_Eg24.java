@@ -1,4 +1,4 @@
-public class Array_Eg25 {
+public class Array_Eg24 {
 
     public static void main(String[] args) {
 

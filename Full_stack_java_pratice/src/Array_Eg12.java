@@ -1,4 +1,4 @@
-public class Array_Eg13 {
+public class Array_Eg12 {
     public static void main(String[] args) {
 
         // ❌ INVALID array creation

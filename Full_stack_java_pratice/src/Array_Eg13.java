@@ -1,4 +1,4 @@
-public class Array_Eg14 {
+public class Array_Eg13 {
     public static void main(String[] args) {
 
         // Create an int array of size 3

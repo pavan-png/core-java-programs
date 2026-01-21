@@ -1,15 +1,38 @@
-public class Array_Eg21 {
+public class Array_Eg19 {
     public static void main(String[] args) {
+
+        // Create a 2D int array
+        // a refers to an array of int[] objects
         int[][] a = {{1,2},{3,4}};
-        int[] b = (int[]) (a[1]); // we can type cast from 2d array to 1d array.
+
+        // a[1] is already a 1D int array (int[])
+        // No real type casting is needed here
+        // The cast works, but it is redundant
+        int[] b = (int[]) a[1];
+
+        // Assign 2D array reference to Object type
+        // This is UPCASTING (implicit and always allowed)
         Object o1 = a;
-        int[][]  a2 = (int[][]) (o1); /*
-         implicit type casting cannot be done from object to array. so done explicitly
-         to type cast there must be parent to child (or) child to parent relation. object is a
-         higher type and array is a lower type, so explicit typecasting is done
+
+        /*
+         Object cannot be automatically converted back to int[][]
+         because Object is a parent type.
+         Hence, EXPLICIT DOWNCASTING is required.
+
+         This is valid because:
+         - The actual object referenced by o1 is int[][]
+         - Array is a child of Object
         */
-        System.out.println(b[1]);
+        int[][] a2 = (int[][]) o1;
+
+        // Prints element at index 1 of array b
+        // b = {3, 4}
+        System.out.println(b[1]);   // Output: 4
+
+        // Prints reference of int[] b (type + hashcode)
         System.out.println(b);
+
+        // Prints reference of Object o1 (still points to int[][])
         System.out.println(o1);
     }
 }

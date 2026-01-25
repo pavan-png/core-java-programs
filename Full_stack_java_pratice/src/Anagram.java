@@ -2,27 +2,22 @@ import java.util.Arrays;
 
 public class Anagram {
     public static void main(String[] args) {
+
         String s1 = "a gentle man";
         String s2 = "elegant man";
 
-        s1= s1.replace(" ", "");
-        s2 = s2.replace(" ","");
+        // 1. Remove spaces and convert to lowercase
+        //    (Anagram check should ignore spaces and case)
+        char[] a = s1.replace(" ", "").toLowerCase().toCharArray();
+        char[] b = s2.replace(" ", "").toLowerCase().toCharArray();
 
-        s1= s1.toLowerCase();
-        s2 = s2.toLowerCase();
+        // 2. Sort both character arrays
+        //    Same characters will come in same order if they are anagrams
+        Arrays.sort(a);
+        Arrays.sort(b);
 
-       char[] arr = s1.toCharArray();
-       char[] arr1 = s2.toCharArray();
-
-        Arrays.sort(arr);
-        Arrays.sort(arr1);
-
-        if (Arrays.equals(arr,arr1)){
-            System.out.println("anagram");
-        }
-        else{
-            System.out.println(" not a anagram");
-        }
-
+        // 3. Compare sorted arrays
+        //    Arrays.equals() compares content, not reference
+        System.out.println(Arrays.equals(a, b) ? "anagram" : "not an anagram");
     }
 }

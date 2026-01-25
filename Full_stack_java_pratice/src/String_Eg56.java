@@ -1,10 +1,21 @@
 public class String_Eg56 {
     public static void main(String[] args) {
-        System.out.print(""=="");
+
+        // Both "" are EMPTY STRING LITERALS
+        // String literals are stored in String Constant Pool (SCP)
+        // Same literal → same memory reference
+        // == compares references
+        System.out.print("" == "");   // true
+
+        // Just printing a space for separation in output
         System.out.print(" ");
 
-        // they are direct string literals space is  allocated in the s.c.p .
-        System.out.print("A" == "A");
-        System.out.print("a==A");
+        // "A" and "A" are SAME string literals
+        // Only one "A" object exists in SCP
+        // Both references point to the SAME object
+        System.out.print("A" == "A"); // true
+
+        // This is just a STRING being printed, not a comparison
+        System.out.print(" a==A");
     }
 }

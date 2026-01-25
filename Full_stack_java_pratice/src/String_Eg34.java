@@ -1,19 +1,34 @@
 public class String_Eg34 {
     public static void main(String[] args) {
+
+        // Declaring two long variables
         long x = 42L;
-        long y = 44l;
+        long y = 44L;
 
-        // if the first operation is String , all the remaining expression is  concatenated  ( " " in this case )
-        System.out.println(" " +7 + 2 + " ");
+        // If the FIRST operand is a String,
+        // all remaining operands are treated as Strings
+        // and concatenation happens from LEFT to RIGHT
+        // " " + 7 → " 7"
+        // " 7" + 2 → " 72"
+        // " 72" + " " → " 72 "
+        System.out.println(" " + 7 + 2 + " ");
 
-        // here foo() return type is String , all the remaining expression is concatenated
+        // foo() returns a String ("foo")
+        // Since the FIRST operation is String,
+        // all remaining values are concatenated as Strings
+        // "foo" + 42 → "foo42"
+        // "foo42" + 5 → "foo425"
+        // "foo425" + " " → "foo425 "
         System.out.println(foo() + x + 5 + " ");
 
-        // here first operation is  not string , so x and y are added normally and then concatenated with String foo
-        System.out.println(x + y + foo() );
+        // Here the FIRST operation is NOT String
+        // x + y → 42 + 44 = 86 (normal numeric addition)
+        // Then 86 + "foo" → "86foo" (String concatenation)
+        System.out.println(x + y + foo());
     }
-    static String foo(){
 
+    // This method returns a String
+    static String foo() {
         return "foo";
     }
 }

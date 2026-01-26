@@ -1,15 +1,32 @@
 public class String_Eg128 {
+
+    // Static String variable
+    // Default value for any reference variable is null
     static String s;
+
+    // Explicitly assigned null
     static String s1 = null;
+
     public static void main(String[] args) {
 
-        System.out.println(s1.isBlank());
+        // s1 is null
+        // No String object is created in memory
+        // Calling isBlank() on a null reference
+        // JVM tries to access a method on null
+        // This results in NullPointerException
+        // System.out.println(s1.isBlank());  // ❌ NPE
 
-         //= null;
-        System.out.println(s.isBlank());
-        // null is the default value assigned to a String variable , here object is not created and we are trying to perform operation
-        // on that so it results in the NullPointerException
+
+        // s is also null by default
+        // Again, no object is created
+        // Calling isBlank() on null reference
+        // This also results in NullPointerException
+        // System.out.println(s.isBlank());   // ❌ NPE
 
 
+        // IMPORTANT NOTE:
+        // isBlank() is a method of String class
+        // It can be called ONLY when a String object exists
+        // null means reference exists but object does NOT exist
     }
 }

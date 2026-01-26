@@ -1,22 +1,51 @@
 public class String_Eg77 {
     public static void main(String[] args) {
-        String s1  = "Hello";
-        System.out.println(s1.toString());
 
-        String  s = null;
-       //  System.out.println(s.toString()); cannot perform operations on null NullPointerException.
-        System.out.println(s); //
+        // Normal String object
+        String s1 = "Hello";
 
-      //  String s2 = null +null  leads to compilation error.
-        // since literals are involved compiler will come into picture. since operation cant be performed on null it leads to C.E
+        // Calling toString() on a valid String object
+        // String overrides toString(), so it returns the same content
+        System.out.println(s1.toString()); // Hello
 
-        s = null+s;
+        // String reference pointing to null
+        String s = null;
 
-        // here though we have performed operation on null s is treated as string so null is treated as string
-        System.out.println(s);
+        // Calling any method on a null reference causes NullPointerException
+        // System.out.println(s.toString()); // ❌ NullPointerException
 
-        // since they are concatenated as Strings . all the String methods can be applied to it.
-        System.out.println(s.length());
-        System.out.println(s.charAt(2));
+        // Printing a null reference using println
+        // println internally uses String.valueOf(Object)
+        // String.valueOf(null) returns the String "null"
+        System.out.println(s); // prints: null
+
+        // This is INVALID:
+        // String s2 = null + null; // ❌ Compile-time error
+        //
+        // Reason:
+        // '+' requires at least one operand to be a String
+        // Here, both operands are null literals → no String involved
+        // So compiler cannot decide how to apply '+'
+
+        // This IS VALID:
+        // At least one operand (s) is of type String
+        // So '+' is treated as STRING CONCATENATION
+        //
+        // Internally this becomes:
+        // s = String.valueOf(null) + String.valueOf(s);
+        //
+        // String.valueOf(null) → "null"
+        // String.valueOf(s)    → "null"
+        //
+        // Result: "nullnull"
+        s = null + s;
+
+        // s now refers to a real String object: "nullnull"
+        System.out.println(s); // nullnull
+
+        // Since s is now a valid String object,
+        // all String methods can be safely called
+        System.out.println(s.length());   // 8
+        System.out.println(s.charAt(2));  // 'l'
     }
 }

@@ -1,38 +1,95 @@
 public class String_Eg102 {
     public static void main(String[] args) {
+
+        /*
+         * final primitive variables with constant values
+         * are treated as compile-time constants.
+         */
         final int i1 = 1;
         final int i2 = 1;
+
+        /*
+         * final String literal is also a compile-time constant.
+         * Stored in String Constant Pool (SCP).
+         */
         final String s1 = ":One";
 
+        /*
+         * String literal "hello" is stored in SCP.
+         * p1 points to the same SCP object.
+         */
         String p1 = "hello";
-        // == checks the object reference , as it is a literal it is present in s.c.p, and p1 is pointing
-        // hello object, as both the address are same it returns true
-        System.out.println(p1=="hello");
 
+        /*
+         * == compares references.
+         * Both p1 and "hello" refer to the SAME SCP object.
+         */
+        System.out.println(p1 == "hello"); // true
+
+        /*
+         * i1 + s1:
+         * - i1 is final primitive
+         * - s1 is final String
+         * Both are compile-time constants.
+         *
+         * Expression is evaluated at COMPILE TIME.
+         * Result "1:One" is placed in SCP.
+         */
         String str1 = i1 + s1;
+
+        /*
+         * Same logic as above.
+         * Compiler reuses the same SCP object "1:One".
+         */
         String str2 = i2 + s1;
-        System.out.println(str1);
-        System.out.println(str2);
-        System.out.println(str1==str2);
-        System.out.println(str1 == "1:One");
-        System.out.println(str2 == "1:One");
-        // if primitives are used only then space is allocated in s.c.p , if wrapper classes are used space is
-        //is allocated in heap
 
-        String s3 = "hello" +"hi";
-        String s4 = "hello"+"hi";
-        // since literals are involved and concat only concat operation is made with operator, space is allocated directly in the s.c.p
+        System.out.println(str1); // 1:One
+        System.out.println(str2); // 1:One
+
+        /*
+         * Both references point to the SAME SCP object.
+         */
+        System.out.println(str1 == str2); // true
+
+        /*
+         * "1:One" literal is already in SCP.
+         * str1 also points to the same SCP object.
+         */
+        System.out.println(str1 == "1:One"); // true
+        System.out.println(str2 == "1:One"); // true
+
+        /*
+         * NOTE (important correction):
+         * It is NOT about primitives vs wrapper classes.
+         * It is about whether the expression is a
+         * COMPILE-TIME CONSTANT or a RUNTIME expression.
+         */
+
+        /*
+         * Both operands are string literals.
+         * Concatenation happens at COMPILE TIME.
+         * Result "hellohi" is stored in SCP.
+         */
+        String s3 = "hello" + "hi";
+        String s4 = "hello" + "hi";
+
+        /*
+         * Both s3 and s4 refer to the SAME SCP object.
+         */
         System.out.println("s3==s4");
-        System.out.println( s3==s4);
+        System.out.println(s3 == s4); // true
 
+        /*
+         * concat() is a METHOD call.
+         * Method calls are evaluated at RUNTIME.
+         * New String objects are created in HEAP.
+         */
         String s5 = "hi".concat("hello");
         String s6 = "hi".concat("hello");
-        System.out.println(s5==s6);
-        // even though literals are involved. if a method/ runtime operation is involved space is allocated in heap
 
-
-
-
-
+        /*
+         * Different heap objects → different references.
+         */
+        System.out.println(s5 == s6); // false
     }
 }

@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://media.giphy.com/media/iTxB1m55jFqJq/giphy.gif" width="100" />
+  <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" width="100" />
   <br/>
   <h1>
     <a href="https://git.io/typing-svg">
@@ -21,12 +21,12 @@
 
 Welcome to a **comprehensive ecosystem** for mastering Core Java. This repository is uniquely structured to bridge the gap between **theoretical understanding** and **practical application**.
 
-Unlike standard repositories, this project links every concept to a dedicated documentation file and a corresponding real-world code example.
+Unlike standard repositories, this project separates the theory and the code into two distinct, easy-to-navigate modules:
 
 | 📂 **Component** | 📝 **Description** |
 |:---:|:---|
-| **Documentation** | Detailed `.docx` notes for every single concept. |
-| **Applications** | Working source code projects implementing those exact notes. |
+| **Java_Documentation** | Detailed `.docx` notes for every single concept. |
+| **Full_stack_java_pratice** | Working source code projects implementing those notes. |
 
 ---
 
@@ -34,12 +34,16 @@ Unlike standard repositories, this project links every concept to a dedicated do
 
 ```text
 core-java-programs/
-├── 📂 Full_stack_java_pratice/       # Main Project Folder (Open this in IDE)
-│   ├── 📂 Java_Documentation/        # 📘 Theory (Word Files)
-│   │   ├── 📄 Introduction.docx
-│   │   ├── 📄 OOPs_Concepts.docx
+├── 📂 Java_Documentation/        # 📘 Theory (Start Here)
+│   ├── 📄 Introduction.docx
+│   ├── 📄 OOPs_Concepts.docx
+│   └── ...
+│
+├── 📂 Full_stack_java_pratice/   # 💻 Practical (Open in IDE)
+│   ├── 📂 .idea/
+│   ├── 📂 src/
+│   │   ├── ☕ Main.java
 │   │   └── ...
-│   └── 📂 src/                       # 💻 Practical (Source Code)
-│       ├── ☕ Main.java
-│       └── ...
+│   └── ...
+│
 └── 📄 README.md

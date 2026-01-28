@@ -1,75 +1,54 @@
-class Order{
-    // static variables
-    static int a ;
-    static int b ;
+class Order {
 
-    // static block
-     static {
-    a = 10;
-    b = 20;
-        System.out.println("static block");
-        System.out.println("static variables");
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println("----------------------------------------------------------------------------");
+    // 1. static variables
+    static int a = 10;
+    static int b = 20;
+
+    // 2. static block
+    static {
+        System.out.println("1. static block");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+        System.out.println("--------------------------------");
     }
 
-    // static method
-    static void static_Method(){
-        System.out.println("static method");
-        System.out.println("static variables");
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println("----------------------------------------------------------------------------");
-    }
+    // 3. instance variables
+    int c = 30;
+    int d = 40;
 
-    //non static variables  ( instance variables )
-    int c ;
-    int d ;
-
-    // java block
+    // 4. instance block
     {
-        c = 30;
-        d = 40;
-        System.out.println("java block");
-        System.out.println("static variables");
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println("non static variables");
-        System.out.println(c);
-        System.out.println(d);
-        System.out.println("--------------------------------------------------------------------------------");
-    }
-        public Order(){
-            System.out.println("constructor");
-            System.out.println("static variables ");
-            System.out.println(a);
-            System.out.println(b);
-            System.out.println("non static variables");
-            System.out.println(c);
-            System.out.println(d);
-            System.out.println("---------------------------------------------------------------------------");
-        }
-
-
-    // non static method
-    void non_Static_Method(){
-        System.out.println("non static method");
-        System.out.println("static variables");
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println("non static variables");
-        System.out.println(c);
-        System.out.println(d);
+        System.out.println("3. instance block");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+        System.out.println("c = " + c);
+        System.out.println("d = " + d);
+        System.out.println("--------------------------------");
     }
 
+    // 5. constructor
+    Order() {
+        System.out.println("4. constructor");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+        System.out.println("c = " + c);
+        System.out.println("d = " + d);
+        System.out.println("--------------------------------");
+    }
 
+    // 6. non-static method
+    void nonStaticMethod() {
+        System.out.println("5. non-static method");
+    }
 }
+
 public class Order_Of_Execution {
     public static void main(String[] args) {
-        Order.static_Method();
-Order obj = new Order();
-obj.non_Static_Method();
 
+        System.out.println("2. main method");
+        System.out.println("--------------------------------");
+
+        Order obj = new Order();   // triggers instance flow
+        obj.nonStaticMethod();
     }
 }

@@ -1,26 +1,70 @@
-class Payload{ // encapsulated class
+class Payload { // Encapsulated class
+
+    // Instance variable (object-specific data)
     private int weight;
-    public Payload(int w){
+
+    // Constructor initializes the instance variable
+    public Payload(int w) {
         weight = w;
     }
-    public void setWeight(int w){
-        weight =w;
-    }
-    public String toString(){  // toString() will act as a getter
 
+    // Setter method to modify instance variable
+    public void setWeight(int w) {
+        weight = w;
+    }
+
+    /*
+     toString() is overridden.
+     Whenever an object is printed, this method is called automatically.
+     Here it behaves like a getter by returning weight as String.
+    */
+    public String toString() {
         return Integer.toString(weight);
     }
 }
+
 public class Static_Method_Eg2 {
-    static void changePayload(Payload p){
-        p.setWeight(420);/*
-        inside a static method using a reference we can make a call to instance method
+
+    /*
+     Static method:
+     - Belongs to the class, not to any object
+     - Can receive object references as parameters
+     - Using the reference, it can access instance methods
+    */
+    static void changePayload(Payload p) {
+
+        /*
+         p is a local variable that holds a COPY of the reference
+         Both 'p' and the caller variable refer to the SAME object
+
+         Calling instance method using reference is allowed
+         Object state will be modified
         */
+        p.setWeight(420);
     }
+
     public static void main(String[] args) {
-        Payload p = new Payload(200); // weight = 200
-        p.setWeight(1024); // weight = 1024
-        changePayload(p); // this object is given to changePayLoad
-        System.out.println("p is "+p);
+
+        // Step 1: Object creation
+        // weight = 200
+        Payload p = new Payload(200);
+
+        // Step 2: Modify object state using instance method
+        // weight = 1024
+        p.setWeight(1024);
+
+        /*
+         Step 3: Pass object reference to static method
+         - A copy of the reference is passed
+         - Object itself is NOT copied
+        */
+        changePayload(p);
+
+        /*
+         Step 4: Printing object
+         - toString() is called automatically
+         - Shows updated object state
+        */
+        System.out.println("p is " + p); // prints: p is 420
     }
 }

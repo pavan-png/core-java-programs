@@ -1,36 +1,41 @@
-import java.util.*;
- class Loan {
-private float principal_Amount;
-private float time_Period;
-private float simple_Interest;
-private static float rate_Of_Interest;
+import java.util.Scanner;
 
-static {
-    rate_Of_Interest = 2.0f;
+class Loan {
+
+    private float principal;
+    private float time;
+    private float interest;
+
+    private static float rate; // common to all farmers
+
+    static {
+        rate = 2.0f;
+    }
+
+    void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter principal:");
+        principal = sc.nextFloat();
+        System.out.println("Enter time in years:");
+        time = sc.nextFloat();
+    }
+
+    void calculate() {
+        interest = (principal * time * rate) / 100;
+    }
+
+    void display() {
+        System.out.println("Simple interest = " + interest);
+    }
 }
 
-void input_loan_Details(){
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Enter the principal amount");
-    principal_Amount = sc.nextFloat();
-    System.out.println("enter the time  period in years");
-    time_Period = sc.nextFloat();
+public class Farmer_Loan {
 
-}
-
-void Simple_Interest_Calculate(){
-    simple_Interest = (principal_Amount * time_Period * rate_Of_Interest)/100;
-}
-void disp_Simple_Interest(){
-    System.out.println("total simple interest is "+simple_Interest);
-}
-}
-public class Farmer_Loan{
     public static void main(String[] args) {
-        Loan f1 = new Loan();
-        f1.input_loan_Details();
-        f1.Simple_Interest_Calculate();
-        f1.disp_Simple_Interest();
 
+        Loan farmer1 = new Loan();
+        farmer1.input();
+        farmer1.calculate();
+        farmer1.display();
     }
 }

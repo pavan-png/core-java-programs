@@ -1,26 +1,37 @@
 public class Manual_Execution {
-    int c ;
+
+    // instance variables
+    int c;
     int d;
+
+    // instance block
     {
-        System.out.println("this is  java block");
         c = 10;
         d = 20;
+        System.out.println("instance block executed");
+        System.out.println("c = " + c);
+        System.out.println("d = " + d);
     }
-    static void test(){
-        System.out.println("static method");
-    }
-    Manual_Execution(){
 
-        System.out.println("this is constructor ");
+    // constructor
+    Manual_Execution() {
+        System.out.println("constructor executed");
     }
-    void disp(){
 
-        System.out.println("this is instance method");
+    // static method
+    static void test() {
+        System.out.println("static method executed");
     }
+
+    // instance method
+    void disp() {
+        System.out.println("instance method executed");
+    }
+
     public static void main(String[] args) {
-        Manual_Execution obj = new Manual_Execution();
-        obj.disp();
-        test();
 
+        Manual_Execution obj = new Manual_Execution(); // triggers instance flow
+        obj.disp();                                    // instance method
+        test();                                        // static method
     }
 }

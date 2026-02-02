@@ -1,40 +1,43 @@
-class Parent11{
-    int a ;
+class Parent11 {
+    int a;
     int b;
-    Parent11(){
-        System.out.println("this is empty parent class constructor");
+
+    Parent11() {
         a = 10;
         b = 20;
+        System.out.println("parent class default constructor a = " + a);
+        System.out.println("parent class default constructor b = " + b);
     }
-    Parent11(int a , int b){
-        System.out.println("this  is parameterized parent class constructor");
+
+    Parent11(int a, int b) {
         this.a = a;
         this.b = b;
-
-        System.out.println("a = "+a);
-        System.out.println("b = "+b);
+        System.out.println("parent class parameterized constructor a = " + a);
+        System.out.println("parent class parameterized constructor b = " + b);
     }
 }
-class Child12 extends Parent11{
+
+class Child12 extends Parent11 {
     int x;
     int y;
-    Child12(){
-        System.out.println("this is empty child class constructor");
-        x = 111;
-        y = 222;
 
+    Child12() {
+        x = 1111;
+        y = 2222;
+        System.out.println("child class default constructor x = " + x);
+        System.out.println("child class default constructor y = " + y);
     }
-    Child12(int x , int y){
-        System.out.println("this is parameterized  child class constructor ");
+
+    Child12(int x, int y) {
         this.x = x;
         this.y = y;
-        System.out.println("x = "+x);
-        System.out.println("y = "+y);
+        System.out.println("child class parameterized constructor x = " + x);
+        System.out.println("child class parameterized constructor y = " + y);
     }
-
 }
+
 public class Constructor_Working_During_Inheritance_Eg3 {
     public static void main(String[] args) {
-        Child12 ref = new Child12(1111,2222);
+        Child12 ref = new Child12(1111, 2222);
     }
 }

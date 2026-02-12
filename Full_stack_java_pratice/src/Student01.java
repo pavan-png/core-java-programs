@@ -1,40 +1,35 @@
- class Student01 {
-    private String st_Name ;
-    private Integer st_Age;
-    private Integer st_Id;
-     public  Student01(String st_Name,Integer st_Age,Integer st_Id){
-         this.st_Name = st_Name;
-         this.st_Age = st_Age;
-         this.st_Id = st_Id;
-}
-public void setSt_Name(String st_Name ){
-    this.st_Name = st_Name;
-}
-public  String getSt_Name(){
-    return st_Name;
-}
+class Student01 {
 
-public void setSt_Age(Integer st_Age){
-    this.st_Age = st_Age;
-}
-public Integer getSt_Age(){
-    return st_Age;
-}
+    private String name;
+    private int age;
+    private int id;
 
-public void setSt_Id(Integer st_Id){
-    this.st_Id = st_Id;
-}
-public Integer getSt_Id(){
-    return st_Id;
-}
+    // Constructor Injection (Primitive Value Injection)
+    public Student01(String name, int age, int id) {
+        this.name = name;
+        this.age = age;
+        this.id = id;
+    }
 
-     @Override
-     public String toString() {
-         return "Student01{" +
-                 "st_Name='" + st_Name + '\'' +
-                 ", st_Age=" + st_Age +
-                 ", st_Id=" + st_Id +
-                 '}';
-     }
- }
+    // Getters
+    public String getName() {
+        return name;
+    }
 
+    public int getAge() {
+        return age;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", id=" + id +
+                '}';
+    }
+}

@@ -1,35 +1,96 @@
+// Parent Interface A5
+interface A5 {
 
-interface A5{
-   // by default the variables in the interface are public static final , so value should be given while declaration
-    String s = "hello";
+    /*
+     * Variables declared inside an interface are:
+     * public + static + final  (by default)
+     *
+     * So they are constants.
+     * Value MUST be assigned at the time of declaration.
+     */
 
-    // from jdk 1.8 interface can have concrete methods only if the modifier is default , private
-    default void method1(){
+    String s = "hello";   // public static final String s = "hello";
+
+
+    /*
+     * From Java 8 onwards, interfaces can have:
+     * - default methods (with implementation)
+     * - static methods
+     * - private methods (Java 9+)
+     *
+     * A concrete method inside interface MUST be declared as 'default'
+     * (unless it is static or private).
+     */
+
+    default void method1() {
         System.out.println("pavan");
     }
 }
-interface B2{
 
+
+// Empty Interface
+interface B2 {
+    /*
+     * An interface can be empty.
+     * Such interfaces are sometimes called marker interfaces
+     * (if used to give special ability like Serializable).
+     */
 }
 
-// an interface can extend two interfaces at a time , multiple inheritance is possible through interface
-interface C extends A5 , B2{
 
-    // we can override method with same signature , only one method will be copied.
-    default void method1(){
+// Child Interface with Multiple Inheritance
+/*
+ * An interface can extend multiple interfaces.
+ * This is how Java supports multiple inheritance.
+ */
+interface C extends A5, B2 {
+
+    /*
+     * Default methods from parent interfaces
+     * can be overridden in child interface.
+     *
+     * Only ONE version of method1() will exist in C.
+     * The overridden version replaces the parent version.
+     */
+
+    @Override
+    default void method1() {
         System.out.println("hello");
     }
 
-    /* interface method cannot be given protected modifier it leads to compile time error
-        overloaded method
+
+    /*
+     * Overloading is allowed in interfaces.
+     * This is a different method because parameter list is different.
      */
 
-     public void method1(int x);
+    public void method1(int x);
+
+
+    /*
+     * Important:
+     * Interface methods cannot have:
+     * - protected
+     * - private (unless Java 9+ and only for non-abstract methods)
+     *
+     * Abstract methods in interface are always:
+     * public + abstract (implicitly).
+     */
 }
 
-public class Interface_Eg6 {
-    public static void main(String[] args) {
-        // no compilation error
 
+// Implementation Class
+public class Interface_Eg6 {
+
+    public static void main(String[] args) {
+
+        /*
+         * No compilation error because:
+         * - We are not creating an object of C.
+         * - C has one abstract method (method1(int)).
+         *
+         * If a class implements C,
+         * it MUST implement method1(int).
+         */
     }
 }

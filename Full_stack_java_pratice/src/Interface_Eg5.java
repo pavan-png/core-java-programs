@@ -1,22 +1,60 @@
 public class Interface_Eg5 {
 
-    /* we can write an interface inside the class
-    by default Object class methods are present in all child classes with predefined implementation from
-    Object class, equals method is object class method with predefined implementation
-    so below interface is  a functional interface since it has only one abstract method apply
-
+    /*
+     * An interface can be declared inside a class.
+     * Such an interface is called a nested interface.
+     *
+     * It behaves like a normal interface.
      */
-    interface lambda_Function{
+
+    interface lambda_Function {
+
+        /*
+         * This is the Single Abstract Method (SAM).
+         * Lambda expressions will bind to this method.
+         */
         int apply(int j);
+
+
+        /*
+         * equals() looks like another abstract method,
+         * but it is actually declared in java.lang.Object.
+         *
+         * All interfaces implicitly have access to Object class methods:
+         *    equals()
+         *    hashCode()
+         *    toString()
+         *
+         * Since equals() already has a public implementation
+         * in Object class, it is NOT counted as an abstract
+         * method for functional interface calculation.
+         *
+         * Therefore, this interface still has only ONE
+         * abstract method (apply).
+         */
         boolean equals(java.lang.Object arg0);
     }
+
     public static void main(String[] args) {
-        Interface_Eg5.lambda_Function obj = (i)->{
-            i=i*i;
+
+        /*
+         * Since lambda_Function has exactly ONE abstract method (apply),
+         * it is considered a Functional Interface.
+         *
+         * Lambda expressions always bind to the Single Abstract Method (SAM).
+         */
+
+        Interface_Eg5.lambda_Function obj = (i) -> {
+            i = i * i;
             return i;
         };
-        // all the above code can be written as obj = i->i*i;
-        System.out.println(obj.apply(10));
 
+        /*
+         * The above lambda can be simplified as:
+         *
+         * Interface_Eg5.lambda_Function obj = i -> i * i;
+         */
+
+        System.out.println(obj.apply(10));  // Output: 100
     }
 }

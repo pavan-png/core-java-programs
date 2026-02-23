@@ -1,21 +1,16 @@
-class Variable_Arguments{
-    public void add(int... x){
-
-      for(int a:x){
-          System.out.println("variable arguments "+a);
-      }
-
-
-
-    }
-}
-
 public class Var_Args_Eg1 {
+    public static void add(int... numbers) {
+        int sum = 0;
+        for (int n : numbers) {
+            sum += n;
+        }
+        System.out.println(sum);
+    }
+
     public static void main(String[] args) {
-        Variable_Arguments obj = new Variable_Arguments();
-        obj.add(10);
-        obj.add(10,14);
-        obj.add(10,15,29);
-        obj.add(13,34,23,12);
+        add();                // 0
+        add(10);              // 10
+        add(10, 20);          // 30
+        add(10, 20, 30, 40);  // 100
     }
 }

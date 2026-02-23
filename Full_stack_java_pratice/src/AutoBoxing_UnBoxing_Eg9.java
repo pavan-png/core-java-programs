@@ -1,23 +1,54 @@
 public class AutoBoxing_UnBoxing_Eg9 {
-    Integer i ;
+
+    // Instance variable of wrapper type.
+    // Since it is NOT initialized,
+    // default value = null.
+    Integer i;
+
+    // Primitive instance variable.
+    // Default value = 0.
     int x;
+
     public AutoBoxing_UnBoxing_Eg9(int y){
-        x = i+y;
 
-        /*  auto unboxing will happen at r.h.s side and result is stored in x
-         int(x) = Integer (i) + int (y)
-                    = null  + 4           since i is reference type no value is assigned to it so null.
-                    = cant perform operation on null ( adding null and 4 )  leads to null pointer exception
+        /*
+         Expression: x = i + y;
 
+         Here:
+         i → Integer (wrapper, currently null)
+         y → int (primitive)
 
-         */
+         Java cannot directly add Integer + int.
+         So first AUTO-UNBOXING happens.
+
+         Internally this becomes:
+
+             x = i.intValue() + y;
+
+         But i is null.
+
+         So this becomes:
+
+             x = null.intValue() + y;
+
+         Calling any method on null → NullPointerException.
+        */
+
+        x = i + y;   // 💥 NullPointerException occurs here
+
+        // This line will NEVER execute.
         System.out.println(x);
-
-
     }
+
     public static void main(String[] args) {
-    new AutoBoxing_UnBoxing_Eg9(new Integer(4));
 
-
+        // Here constructor expects int.
+        // We are passing new Integer(4).
+        // So AUTO-UNBOXING happens:
+        //
+        // new Integer(4) → 4
+        //
+        // That part is safe.
+        new AutoBoxing_UnBoxing_Eg9(new Integer(4));
     }
 }

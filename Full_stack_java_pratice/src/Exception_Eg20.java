@@ -1,29 +1,55 @@
+import java.io.IOException;
 
-class Base_1 {
-    public void m1() throws NullPointerException {
-        // unchecked exception
-        System.out.println("Base: m1()");
+class ReadTheFile {
 
+    // Step 1:
+    // This method declares a CHECKED exception (IOException).
+    // So any caller of this method must:
+    //   ✔ Handle it using try-catch
+    //   OR
+    //   ✔ Declare it using throws (ducking)
+
+    static void print() throws IOException {
+
+        // Step 2:
+        // Explicitly throwing checked exception
+        throw new IOException();
     }
-
 }
 
-class Derived_1 extends Base_1 {
-    public void m1() throws RuntimeException {
-        // unchecked exception : whenever unchecked exception compiler will never check for
-        // overriding rules for exception
-        System.out.println("Derived: m1()");
+public class Exception_Eg20 extends ReadTheFile {
 
+    public static void main(String[] args) throws Exception {
+
+        /*
+         Step 3:
+         main() is calling print().
+
+         print() declares:
+             throws IOException  (checked exception)
+
+         So main() must either:
+             ✔ catch IOException
+             OR
+             ✔ declare throws IOException
+             OR
+             ✔ declare a broader exception (like Exception)
+
+         Here we declared:
+             throws Exception
+
+         This is VALID because:
+
+         IOException is a subclass of Exception.
+
+         Hierarchy:
+             Exception
+                ↑
+             IOException
+
+         So ducking a broader exception is allowed.
+        */
+
+        print();  // Step 4: Calling method that throws IOException
     }
-
-}
-
-public class  Exception_Eg20{
-    public static void main(String[] args) {
-        Base_1 obj = new Derived_1();
-        // based on runtime object call to method is made by jvm
-        obj.m1();
-
-    }
-
 }

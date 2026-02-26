@@ -1,43 +1,33 @@
-import java.io.FileNotFoundException;
-
 public class Exception_Handling_Eg26 {
-    public static void main(String[] args) {
-        try {
-            System.out.println(1);
-        }
-        catch (NullPointerException e){
-            System.out.println("One");
-        }
+
+    /*
+     Step 1:
+     Static block executes when the class is loaded.
+     Class loading happens BEFORE main() method runs.
+    */
+    static {
 
         /*
-        catch (FileNotFoundException e1){   // checked exception
-            System.out.println("Two");
+         Step 2:
+         1 / 0 causes ArithmeticException (unchecked).
 
-           when the exception is not generated compiler will check whether the catch block consists of
-          any checked exception
-           if you are writing a catch block w.r.t checked exception , then compulsorily the compiler will
-           check whether the try block has associated checked exception
+         Since this exception occurs inside a static block,
+         JVM cannot allow normal execution.
 
-           since there is no associated code in try block w.r.t checked exception it leads to C.E
+         So JVM wraps the original exception
+         inside ExceptionInInitializerError.
+        */
+        System.out.println(1 / 0);
+    }
 
+    public static void main(String[] args) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        }
-
-         */
-        System.out.println("Three");
+        /*
+         Step 5:
+         This line will NEVER execute,
+         because class initialization fails
+         before main() starts.
+        */
+        System.out.println("hello");
     }
 }

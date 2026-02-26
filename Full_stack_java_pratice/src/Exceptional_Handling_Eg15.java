@@ -1,26 +1,46 @@
-
 public class Exceptional_Handling_Eg15 {
-    static String s = "";
-    // static variables can be re-intialized final cant
+
     public static void main(String[] args) {
+
         try {
-            s += "1";
-            throw new Exception();
-            // if an exception is thrown either it should be ducked or handled . it is  handled below
+            // Step 1: Create object and call go()
+            new Exceptional_Handling_Eg15().go();
         }
-        catch(Exception e) {
-            s += "2";
+        catch (Exception e) {
+            // Step 5: This block will NOT execute
+
+            /*
+             StackOverflowError is NOT an Exception.
+             It is a subclass of Error.
+
+             Hierarchy:
+             Throwable
+                ├── Exception
+                └── Error
+                      └── StackOverflowError
+
+             Since we are catching Exception,
+             it cannot catch StackOverflowError.
+            */
+
+            System.out.println("ouch");
         }
-        finally {
-        s += "3";
-        doStuff(); // since exception is not handled , abnormal termination.
-        s += "4";
-        }
-System.out.println(s);
     }
 
-    static void doStuff() {
-        int x = 0;
-        int y = 7 / x;
+    void go() {
+
+        // Step 2: Method calls itself
+        go();
+
+        /*
+         Step 3: This creates infinite recursion.
+         Each method call occupies some memory in the stack.
+
+         Since there is no stopping condition,
+         stack memory keeps filling.
+
+         Step 4: When stack memory becomes full,
+         JVM throws StackOverflowError.
+        */
     }
 }

@@ -1,27 +1,65 @@
-public class Exceptional_Handling_Eg31 {
-    public static void main(String[] args) {
-        Error obj = new Error();
-      /*
-        boolean flag1 = obj instanceof RuntimeException;   C.E
-        boolean flag2 = obj instanceof Exception;     C.E
+interface ILogger {
 
-       */
-        boolean flag3 = obj instanceof Error;
-        boolean flag4 = obj instanceof Throwable;
-        System.out.println(/* flag1 + " : " +flag2 +  */ " : "+flag3 + " : "+flag4);
+    // Step 1:
+    // Interface method declaration.
+    // Any implementing class must define log().
+    void log();
+}
+
+public class Exceptional_Handling_Eg31 {
+
+    public static void main(String[] args) {
 
         /*
-        String s = "Hello";
-         System.out.println( s  instanceof StringBuffer);
-         when you use instanceof operator there should be some relationship between object and class
-         here object s and class StrungBuffer has no parent-child (or) child-parent relation so it results in
-         compile time error
+         Step 2:
+         Creating an array of ILogger type with size 2.
 
-         System.out.println ( s instanceof Runnable)
-         whenever you are checking object with interface there is no rule that object and class should have relationship
+         Since ILogger is an interface (reference type),
+         the array will store references.
 
-         */
+         By default, all elements of object arrays
+         are initialized to null.
 
+         So internally:
 
+             loggers[0] = null;
+             loggers[1] = null;
+        */
+        ILogger[] loggers = new ILogger[2];
+
+        /*
+         Step 3:
+         Enhanced for loop iterates over array elements.
+
+         First iteration:
+             logger = loggers[0] → null
+
+         Second iteration:
+             logger = loggers[1] → null
+        */
+        for (ILogger logger : loggers) {
+
+            /*
+             Step 4:
+             Calling method on logger.
+
+             But logger is null.
+
+             So this becomes:
+                 null.log();
+
+             Calling any method on null reference
+             causes NullPointerException.
+            */
+            logger.log();
+        }
+
+        /*
+         Step 5:
+         Program terminates at first iteration itself
+         due to NullPointerException.
+
+         So second iteration never happens.
+        */
     }
 }

@@ -1,26 +1,30 @@
-class Mythread_11 extends Thread{
-    static Thread mt;
+class MyThread_5 extends Thread {
+
+    static Thread mainThread;
+
     @Override
     public void run() {
-        try {
-            mt.join();
-        }
-        catch (InterruptedException e){
-        }
-        for (int i = 0 ; i<5; i++){
-            System.out.println("child thread");
 
+        try {
+            // Child thread waits for main thread
+            mainThread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+
+        System.out.println("Child thread resumes after main thread finishes");
     }
 }
+
 public class Child_Thread_Waiting_For_Main_Thread {
-    public static void main(String[] args) throws InterruptedException {
-        Mythread_11.mt = Thread.currentThread();
-        Mythread_11 t = new Mythread_11();
+
+    public static void main(String[] args) {
+
+        MyThread_5.mainThread = Thread.currentThread();
+
+        MyThread_5 t = new MyThread_5();
         t.start();
-        for (int i = 0 ; i<5; i++){
-            System.out.println("main thread");
-            Thread.sleep(2000);
-        }
+
+        System.out.println("Main thread work completed");
     }
 }

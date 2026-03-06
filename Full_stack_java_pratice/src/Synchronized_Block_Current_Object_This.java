@@ -1,44 +1,53 @@
-class Display_7 {
-    public void wish(String name) {
-        System.out.println("statement-1 before synchronized block");
-        System.out.println("statement-2 before synchronized block");
-        // the above 2 statements can be executed by any thread we cant predict the output, since it is not synchronized
-        synchronized (this) {
-            System.out.println("thread which is getting locked : "+Thread.currentThread().getName());
-            for (int i = 1; i <= 5; i++) {
-                System.out.println("Hey " + name);
+class Display_SB1 {
+
+    void displayNumbers() {
+
+        // non-critical section
+        System.out.println(Thread.currentThread().getName() + " entered method");
+
+        synchronized(this) { // lock on current object
+
+            for(int i=1;i<=5;i++) {
+
+                System.out.print(i);
+
                 try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    System.out.println("thread interrupted");
+                    Thread.sleep(500);
                 }
+                catch (InterruptedException e) {}
             }
-            System.out.println("lock on thread which is getting released : "+Thread.currentThread().getName());
+
+            System.out.println();
         }
+
+        // remaining code can execute without lock
+        System.out.println(Thread.currentThread().getName() + " leaving method");
     }
 }
-class Mythread_26 extends Thread {
-    Display_7 d ;
-    String name;
 
-    public Mythread_26(Display_7 d , String name ){
+class MyThread_SB1 extends Thread {
+
+    Display_SB1 d;
+
+    MyThread_SB1(Display_SB1 d){
         this.d = d;
-        this.name = name;
     }
-    @Override
-    public void  run () {
-        d.wish(name);
+
+    public void run(){
+        d.displayNumbers();
     }
 }
 
 public class Synchronized_Block_Current_Object_This {
+
     public static void main(String[] args) {
-        Display_7 obj = new Display_7();
-        Mythread_26 t = new Mythread_26(obj,"pavan");
-        t.setName("pavan");
-        t.start();
-        Mythread_26 t1 = new Mythread_26(obj, "charan");
-        t1.setName("charan");
+
+        Display_SB1 obj = new Display_SB1();
+
+        MyThread_SB1 t1 = new MyThread_SB1(obj);
+        MyThread_SB1 t2 = new MyThread_SB1(obj);
+
         t1.start();
+        t2.start();
     }
 }

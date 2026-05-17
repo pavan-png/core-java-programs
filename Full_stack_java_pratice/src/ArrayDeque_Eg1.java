@@ -1,27 +1,57 @@
+import java.util.*;
 
-import java.util.ArrayDeque;
-public class ArrayDeque_Eg1 {
+public class ArrayDeque_Eg1{
+
     public static void main(String[] args) {
-        ArrayDeque ad = new ArrayDeque();
-        ad.add(10);
-        ad.add(20);
-        ad.add(30);
-        ad.add(40);
-        System.out.println(ad);
 
-        ArrayDeque ad1 = new ArrayDeque();
-        ad1.add("hello");
-        ad1.add(28.5);
-        ad1.add(25L);
-        System.out.println(ad1);
-        ad.addAll(ad1);
-        System.out.println("adding another collection to ArrayDeque "+ad);
-        ad1.addFirst("zero index");
-        System.out.println(ad1);
-        ad1.addLast("last index");
-        System.out.println(ad1);
-        ad1.clear();
-        System.out.println("after using clear method ");
-        System.out.println(ad1);
+        Deque<String> dq = new ArrayDeque<>();
+
+        // ===============================
+        // 1. INSERT (Queue + Stack style)
+        // ===============================
+        dq.offerLast("Task1");       // Queue insert
+        dq.offerLast("Task2");
+        dq.offerFirst("UrgentTask"); // Stack insert (high priority)
+
+        System.out.println("After Insertions: " + dq);
+
+        // ===============================
+        // 2. PEEK (Check elements)
+        // ===============================
+        System.out.println("Front (peekFirst): " + dq.peekFirst());
+        System.out.println("Rear  (peekLast): " + dq.peekLast());
+
+        // ===============================
+        // 3. REMOVE (Both sides)
+        // ===============================
+        System.out.println("Removed from front (pollFirst): " + dq.pollFirst());
+        System.out.println("Removed from rear  (pollLast): " + dq.pollLast());
+
+        System.out.println("After Removals: " + dq);
+
+        // ===============================
+        // 4. ADD MORE (Mixed operations)
+        // ===============================
+        dq.offerLast("Task3");
+        dq.offerFirst("CriticalTask");
+        dq.offerLast("Task4");
+
+        System.out.println("After More Insertions: " + dq);
+
+        // ===============================
+        // 5. REAL-TIME PROCESSING
+        // ===============================
+        System.out.println("\nProcessing Tasks:");
+
+        while (!dq.isEmpty()) {
+            String task = dq.pollFirst(); // always safe
+            System.out.println("Processing: " + task);
+        }
+
+        // ===============================
+        // 6. FINAL CHECK
+        // ===============================
+        System.out.println("\nDeque Empty? " + dq.isEmpty());
+        System.out.println("Size: " + dq.size());
     }
 }

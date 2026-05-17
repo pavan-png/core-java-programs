@@ -1,32 +1,18 @@
 import java.util.LinkedList;
-import java.util.List;
+import java.util.Queue;
 
 public class LinkedList_Eg1 {
     public static void main(String[] args) {
-        LinkedList ll1 = new LinkedList();
-        ll1.add(10);
-        ll1.add("pavan");
-        ll1.add(20);
-        // heterogenous data
-        System.out.println(ll1);
+        Queue queue = new LinkedList();
 
-        // index based object creation
-        ll1.addFirst("hello");
-        System.out.println(ll1);
+        queue.offer("Task1");
+        queue.offer("Task2");
+        queue.offer("Task3");
 
-        ll1.addLast("bye");
-        System.out.println(ll1);
+        System.out.println("Next Task: " + queue.peek());
 
-        // duplicates are allowed
-        ll1.add(20);
-        System.out.println(ll1);
-
-        LinkedList ll2 = new LinkedList();
-        ll2.add(2);
-
-        // one collection can be added to another collection in LinkedList
-        ll2.addAll(0,ll1);
-        System.out.println(ll2);
-
+        while (!queue.isEmpty()) {
+            System.out.println("Processing: " + queue.poll());
+        }
     }
 }

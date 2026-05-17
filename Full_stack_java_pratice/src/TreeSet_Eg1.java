@@ -1,29 +1,100 @@
 import java.util.TreeSet;
 
-public class TreeSet_Eg1 {
-    public static void main(String[] args) {
-        TreeSet ts = new TreeSet();
-        ts.add(100);
-        ts.add(45);
-        ts.add(101);
-        ts.add(24);
-        ts.add(63);
-        ts.add(120);
-        ts.add(120);
-        // we will get sorted order
-        System.out.println(ts);
+public class TreeSet_Eg1
+{
+    public static void main(String[] args)
+    {
+        TreeSet<Integer> ranks =
+                new TreeSet<>();
 
-        System.out.println(ts.ceiling(45));
-        // if the element is present returns that , else returns the element slightly higher than that
+        // add()
+        ranks.add(105);
+        ranks.add(101);
+        ranks.add(110);
+        ranks.add(103);
+        ranks.add(108);
 
-        System.out.println(ts.higher(45));
-        // returns  slightly higher element
+        // duplicate not allowed
+        ranks.add(103);
 
-        System.out.println(ts.floor(45));
-        // if the element is present returns that , else returns the element slightly lower than that
+        System.out.println(
+                "Student Ranks : "
+                        + ranks);
 
-        System.out.println(ts.lower(45));
-        // returns lightly lower element
+        // first()
+        System.out.println(
+                "Top Rank : "
+                        + ranks.first());
 
+        // last()
+        System.out.println(
+                "Last Rank : "
+                        + ranks.last());
+
+        // contains()
+        System.out.println(
+                "Contains 108 : "
+                        + ranks.contains(108));
+
+        // higher()
+        System.out.println(
+                "Higher than 103 : "
+                        + ranks.higher(103));
+
+        // lower()
+        System.out.println(
+                "Lower than 105 : "
+                        + ranks.lower(105));
+
+        // ceiling()
+        System.out.println(
+                "Ceiling of 104 : "
+                        + ranks.ceiling(104));
+
+        // floor()
+        System.out.println(
+                "Floor of 104 : "
+                        + ranks.floor(104));
+
+        // headSet()
+        System.out.println(
+                "Before 108 : "
+                        + ranks.headSet(108));
+
+        // tailSet()
+        System.out.println(
+                "From 105 : "
+                        + ranks.tailSet(105));
+
+        // subSet()
+        System.out.println(
+                "Range 103 to 110 : "
+                        + ranks.subSet(103, 110));
+
+        // descendingSet()
+        System.out.println(
+                "Descending Order : "
+                        + ranks.descendingSet());
+
+        // remove()
+        ranks.remove(110);
+
+        System.out.println(
+                "After Remove : "
+                        + ranks);
+
+        // pollFirst()
+        System.out.println(
+                "Removed First : "
+                        + ranks.pollFirst());
+
+        // pollLast()
+        System.out.println(
+                "Removed Last : "
+                        + ranks.pollLast());
+
+        System.out.println(
+                "Final TreeSet : "
+                        + ranks);
     }
 }
